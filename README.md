@@ -29,3 +29,15 @@
 </p>
 
 </div>
+
+---
+
+### 🎮 Mini Game: Arrow Maze
+
+<div align="center">
+  <p>Coba taklukkan labirin panah satu arah langsung di browser atau HP Anda!</p>
+  <br/>
+  <a href="https://azuardy.github.io/azuardy/" target="_blank">
+    <img src="https://img.shields.io/badge/▶_MAINKAN_GAME-ARROW_MAZE-10B981?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Mainkan Arrow Maze" />
+  </a>
+</div>
