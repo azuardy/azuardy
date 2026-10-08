@@ -17,22 +17,67 @@
 <div align="center">
 
 #### 📱 Mobile Development
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=flutter,dart,kotlin,androidstudio&theme=dark" alt="Mobile Development" />
-</a>
+<p align="center">
+  <a href="https://flutter.dev" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=flutter" alt="Flutter" width="48" height="48" />
+  </a>
+  <a href="https://dart.dev" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=dart" alt="Dart" width="48" height="48" />
+  </a>
+  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" width="48" height="48" />
+  </a>
+  <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=androidstudio" alt="Android Studio" width="48" height="48" />
+  </a>
+</p>
 
-<br/><br/>
+<br/>
 
 #### 💻 Programming Languages
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=dart,python,js,ts,java,kotlin&theme=dark" alt="Programming Languages" />
-</a>
+<p align="center">
+  <a href="https://dart.dev" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=dart" alt="Dart" width="48" height="48" />
+  </a>
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=python" alt="Python" width="48" height="48" />
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" width="48" height="48" />
+  </a>
+  <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" width="48" height="48" />
+  </a>
+  <a href="https://www.java.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=java" alt="Java" width="48" height="48" />
+  </a>
+  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" width="48" height="48" />
+  </a>
+</p>
 
-<br/><br/>
+<br/>
 
 #### ⚙️ Tools & Workflow
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,postman,figma&theme=dark" alt="Tools & Workflow" />
-</a>
+<p align="center">
+  <a href="https://git-scm.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=git" alt="Git" width="48" height="48" />
+  </a>
+  <a href="https://github.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width="48" height="48" />
+  </a>
+  <a href="https://code.visualstudio.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" width="48" height="48" />
+  </a>
+  <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=androidstudio" alt="Android Studio" width="48" height="48" />
+  </a>
+  <a href="https://www.postman.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=postman" alt="Postman" width="48" height="48" />
+  </a>
+  <a href="https://www.figma.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=figma" alt="Figma" width="48" height="48" />
+  </a>
+</p>
 
 </div>
