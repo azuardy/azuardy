@@ -33,5 +33,5 @@
 ---
 
 <div align="center">
-  <img src="image/animasi.svg" alt="Animation" width="450" />
+  <img src="image/animasi.svg" alt="Animation" width="280" />
 </div>
