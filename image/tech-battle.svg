@@ -1,0 +1,1035 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="arena-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080C16" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1635" />
+    </linearGradient>
+
+    <linearGradient id="neon-title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#F43F5E" />
+    </linearGradient>
+
+    <linearGradient id="arena-line-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="25%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#C084FC" />
+      <stop offset="75%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="hp-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="70%" stop-color="#84CC16" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+
+    <radialGradient id="floor-spotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="arena-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#334155" stroke-width="0.8" stroke-opacity="0.25" />
+    </pattern>
+
+    <!-- Tech Icons Symbol Definitions -->
+    <symbol id="ico-flutter" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="#44D1FD" d="M144.934 38.0615L200.709 38L107.134 131.526L82.7472 155.777L55 127.996L144.934 38.0615ZM144.415 121.569C145.139 120.613 146.471 121.085 147.482 120.962L200.661 120.975L152.194 169.395L124.303 141.675L144.415 121.569Z" /><path fill="#1FBCFD" d="M96.5013 169.442L124.303 141.675L152.194 169.395L152.31 169.518L124.31 197.258L96.5013 169.442V169.442Z" /><path fill="#08589C" d="M124.31 197.258L152.31 169.518L200.681 217.937C182.461 217.978 164.247 217.923 146.034 217.964C144.996 218.196 144.354 217.247 143.691 216.66L124.31 197.258V197.258Z" /></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-kotlin" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" viewBox="0 0 256 256" fill="none">
+<rect width="256" height="256" rx="60" fill="#242938" />
+<path d="M218 218H38V38H218L128 128L218 218Z" fill="url(#paint0_linear_7_120)" />
+<defs>
+<linearGradient id="paint0_linear_7_120" x1="218" y1="38" x2="38" y2="218" gradientUnits="userSpaceOnUse">
+<stop offset="0.00343514" stop-color="#E44857" />
+<stop offset="0.4689" stop-color="#C711E1" />
+<stop offset="1" stop-color="#7F52FF" />
+</linearGradient>
+</defs>
+</svg>
+
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-python" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="url(#paint0_linear_2_47)" d="M127.279 29C76.5066 29 79.6772 51.018 79.6772 51.018L79.7338 73.8284H128.185V80.6772H60.4893C60.4893 80.6772 28 76.9926 28 128.222C28 179.452 56.3573 177.636 56.3573 177.636H73.2812V153.863C73.2812 153.863 72.369 125.506 101.186 125.506H149.24C149.24 125.506 176.239 125.942 176.239 99.4123V55.5461C176.239 55.5461 180.338 29 127.279 29ZM100.563 44.339C105.384 44.339 109.28 48.2351 109.28 53.0556C109.28 57.8761 105.384 61.7723 100.563 61.7723C95.7426 61.7723 91.8465 57.8761 91.8465 53.0556C91.8465 48.2351 95.7426 44.339 100.563 44.339Z" /><path fill="url(#paint1_linear_2_47)" d="M128.721 227.958C179.493 227.958 176.323 205.941 176.323 205.941L176.266 183.13H127.815V176.281H195.511C195.511 176.281 228 179.966 228 128.736C228 77.5062 199.643 79.323 199.643 79.323H182.719V103.096C182.719 103.096 183.631 131.453 154.814 131.453H106.76C106.76 131.453 79.7607 131.016 79.7607 157.546V201.412C79.7607 201.412 75.6615 227.958 128.721 227.958ZM155.437 212.619C150.616 212.619 146.72 208.723 146.72 203.903C146.72 199.082 150.616 195.186 155.437 195.186C160.257 195.186 164.154 199.082 164.154 203.903C164.154 208.723 160.257 212.619 155.437 212.619Z" /><defs><linearGradient id="paint0_linear_2_47" x1="47.22" x2="146.333" y1="46.896" y2="145.02" gradientUnits="userSpaceOnUse"><stop stop-color="#387EB8" /><stop offset="1" stop-color="#366994" /></linearGradient><linearGradient id="paint1_linear_2_47" x1="108.056" x2="214.492" y1="109.905" y2="210.522" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE052" /><stop offset="1" stop-color="#FFC331" /></linearGradient></defs></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-js" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" viewBox="0 0 256 256" fill="none">
+<rect width="256" height="256" rx="60" fill="#F0DB4F" />
+<path d="M67.3117 213.932L86.9027 202.076C90.6821 208.777 94.1202 214.447 102.367 214.447C110.272 214.447 115.256 211.355 115.256 199.327V117.529H139.314V199.667C139.314 224.584 124.708 235.926 103.398 235.926C84.1533 235.926 72.9819 225.959 67.3113 213.93" fill="#323330" />
+<path d="M152.381 211.354L171.969 200.013C177.126 208.434 183.828 214.62 195.684 214.62C205.653 214.62 212.009 209.636 212.009 202.762C212.009 194.514 205.479 191.592 194.481 186.782L188.468 184.203C171.111 176.815 159.597 167.535 159.597 147.945C159.597 129.901 173.345 116.153 194.826 116.153C210.12 116.153 221.118 121.481 229.022 135.4L210.291 147.429C206.166 140.04 201.7 137.119 194.826 137.119C187.78 137.119 183.312 141.587 183.312 147.429C183.312 154.646 187.78 157.568 198.09 162.037L204.104 164.614C224.553 173.379 236.067 182.313 236.067 202.418C236.067 224.072 219.055 235.928 196.2 235.928C173.861 235.928 159.426 225.274 152.381 211.354" fill="#323330" />
+</svg>
+
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-ts" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#007ACC" rx="60" /><path fill="#fff" d="M56.6112 128.849L56.5299 139.333H73.1902H89.8505L89.8505 186.673V234.012H101.635H113.419V186.673L113.419 139.333H130.079H146.739V129.052C146.739 123.363 146.618 118.609 146.455 118.487C146.333 118.325 126.056 118.243 101.472 118.284L56.7331 118.406L56.6112 128.849Z" /><path fill="#fff" d="M206.567 118.108C213.068 119.734 218.026 122.619 222.577 127.332C224.934 129.852 228.428 134.444 228.713 135.541C228.794 135.866 217.66 143.343 210.915 147.528C210.671 147.691 209.695 146.634 208.598 145.009C205.307 140.214 201.853 138.141 196.57 137.776C188.809 137.247 183.811 141.311 183.852 148.097C183.852 150.088 184.136 151.266 184.949 152.892C186.655 156.427 189.825 158.54 199.781 162.847C218.107 170.731 225.949 175.932 230.826 183.327C236.271 191.576 237.49 204.742 233.792 214.535C229.729 225.181 219.651 232.414 205.469 234.812C201.081 235.584 190.678 235.462 185.965 234.609C175.684 232.78 165.932 227.701 159.918 221.037C157.561 218.436 152.969 211.65 153.254 211.162C153.375 211 154.432 210.35 155.61 209.659C156.748 209.009 161.056 206.53 165.119 204.173L172.474 199.906L174.018 202.182C176.172 205.473 180.885 209.984 183.73 211.487C191.897 215.795 203.113 215.185 208.639 210.228C210.996 208.074 211.971 205.839 211.971 202.548C211.971 199.581 211.605 198.281 210.061 196.046C208.07 193.202 204.007 190.804 192.466 185.806C179.26 180.117 173.571 176.582 168.37 170.974C165.363 167.724 162.518 162.522 161.34 158.174C160.365 154.558 160.121 145.496 160.893 141.839C163.615 129.08 173.246 120.181 187.143 117.539C191.654 116.686 202.137 117.011 206.567 118.108Z" /></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-java" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="#fff" d="M101.634 182.619C101.634 182.619 93.9548 187.293 106.979 188.63C122.707 190.634 131.023 190.299 148.386 186.962C148.386 186.962 153.06 189.971 159.406 192.306C120.331 209.002 70.9089 191.304 101.634 182.619ZM96.6252 160.914C96.6252 160.914 88.2753 167.26 101.299 168.593C118.327 170.262 131.69 170.597 154.732 165.926C154.732 165.926 157.741 169.267 162.747 170.936C115.664 184.961 62.8975 172.269 96.6252 160.917V160.914ZM188.795 198.984C188.795 198.984 194.471 203.658 182.449 207.334C160.073 214.012 88.6104 216.019 68.5735 207.334C61.564 204.325 74.9197 199.982 79.2587 199.319C83.6012 198.317 85.9366 198.317 85.9366 198.317C78.2569 192.973 34.8424 209.337 63.8959 214.046C143.709 227.073 209.499 208.37 188.792 199.018L188.795 198.984ZM105.307 138.203C105.307 138.203 68.9052 146.888 92.2793 149.89C102.298 151.223 122 150.892 140.368 149.555C155.396 148.221 170.458 145.548 170.458 145.548C170.458 145.548 165.113 147.886 161.441 150.222C124.342 159.915 53.2107 155.573 73.5827 145.554C90.9526 137.204 105.307 138.203 105.307 138.203V138.203ZM170.423 174.604C207.83 155.234 190.46 136.534 178.438 138.873C175.429 139.54 174.096 140.207 174.096 140.207C174.096 140.207 175.097 138.203 177.436 137.54C201.145 129.19 219.849 162.586 169.757 175.61C169.757 175.61 170.092 175.275 170.423 174.608V174.604ZM108.979 227.364C145.046 229.703 200.147 226.03 201.484 208.995C201.484 208.995 198.817 215.673 171.764 220.683C141.042 226.359 102.968 225.692 80.5957 222.016C80.5957 222.016 85.2698 226.023 108.982 227.36L108.979 227.364Z" /><path fill="#F58219" d="M147.685 28C147.685 28 168.389 49.0388 127.983 80.7594C95.5891 106.472 120.632 121.168 127.983 137.861C108.948 120.833 95.2609 105.802 104.606 91.7762C118.331 71.0828 156.062 61.0644 147.685 28ZM137 123.842C146.683 134.862 134.333 144.881 134.333 144.881C134.333 144.881 159.044 132.195 147.692 116.494C137.338 101.466 129.324 94.1184 172.738 69.0689C172.738 69.0689 104.278 86.0968 137.007 123.835L137 123.842Z" /></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-vscode" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="#2489CA" d="M33.7158 100.208C33.7158 100.208 28.9814 96.795 34.6627 92.2381L47.8994 80.402C47.8994 80.402 51.6869 76.4172 55.6915 79.8891L177.84 172.368V216.714C177.84 216.714 177.781 223.678 168.844 222.908L33.7158 100.208Z" /><path fill="#1070B3" d="M65.1997 128.792L33.7157 157.415C33.7157 157.415 30.4805 159.822 33.7157 164.123L48.3333 177.418C48.3333 177.418 51.8052 181.147 56.9341 176.905L90.3119 151.596L65.1997 128.792Z" /><path fill="#0877B9" d="M120.474 129.029L178.215 84.9391L177.84 40.83C177.84 40.83 175.374 31.2033 167.148 36.2139L90.312 106.145L120.474 129.029Z" /><path fill="#3C99D4" d="M168.844 222.968C172.198 226.4 176.262 225.276 176.262 225.276L221.259 203.103C227.019 199.177 226.21 194.305 226.21 194.305V61.8982C226.21 56.0788 220.252 54.0667 220.252 54.0667L181.253 35.267C172.731 30 167.148 36.2139 167.148 36.2139C167.148 36.2139 174.328 31.0455 177.84 40.83V215.905C177.84 217.109 177.583 218.292 177.071 219.358C176.045 221.429 173.816 223.362 168.47 222.553L168.844 222.968Z" /></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-androidstudio" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" viewBox="0 0 256 256" fill="none">
+<rect width="256" height="256" rx="60" fill="#242938" />
+<path d="M107.028 48.8181H60.7888C51.5798 48.8181 44.0108 56.6801 44.0108 66.4151C43.6818 75.8111 50.9178 83.6701 59.9698 84.0111H107.522L107.028 48.8181Z" fill="#073042" />
+<path d="M211.835 205.303H60.7887C51.4147 205.303 44.0107 197.445 44.0107 187.707V66.2461C44.0107 75.9821 51.5797 83.8411 60.7887 84.0111H187.321C187.321 84.0111 212 81.7931 212 101.097V205.303H211.835Z" fill="#4285F4" />
+<path d="M141.413 143.12C148.159 137.825 149.475 127.917 144.379 121.082C141.579 117.324 137.301 114.933 132.692 114.761H133.186C134.011 114.591 134.997 114.591 135.823 114.761V105.024C135.823 103.828 135.327 102.803 134.34 102.292C132.858 101.437 131.049 101.95 130.227 103.487C129.897 104 129.733 104.512 129.897 105.195V115.102C121.671 116.469 115.912 124.499 117.225 133.213V133.383C117.886 137.483 120.027 141.242 123.316 143.633L95.5088 205.474H113.609L126.441 177.116C127.925 173.698 131.872 172.162 135.327 173.87C136.646 174.554 137.795 175.749 138.453 177.116L151.783 205.474H170.209L141.413 143.12ZM132.036 140.387C126.77 140.387 122.657 135.945 122.657 130.48C122.657 125.011 126.935 120.741 132.199 120.911C134.667 120.911 136.81 121.937 138.617 123.647C142.401 127.403 142.401 133.554 138.781 137.483C137.137 139.192 134.667 140.387 132.036 140.387Z" fill="#3870B2" />
+<path d="M96.9917 57.363H161.818V69.662H96.9917V57.363Z" fill="white" />
+<path d="M127.1 120.741C132.199 120.741 136.48 125.183 136.316 130.649C136.316 135.945 132.036 140.387 126.77 140.216C121.671 140.216 117.556 135.775 117.556 130.48C117.556 127.917 118.542 125.524 120.357 123.647C122.164 121.766 124.63 120.741 127.1 120.741ZM130.72 115.102V104.853C130.72 103.657 130.227 102.633 129.24 102.119C127.76 101.265 125.949 101.778 125.123 103.316C124.793 103.828 124.63 104.341 124.793 105.024V114.933C116.567 116.298 110.808 124.33 112.129 133.042V133.213C112.788 137.31 114.924 141.07 118.215 143.46L83.1688 221.532C81.8538 224.268 82.0178 227.682 83.8278 230.245C86.4568 234.173 91.5618 235.198 95.3418 232.466C96.6628 231.611 97.6488 230.245 98.3058 228.878L121.671 176.944C123.151 173.528 127.1 171.99 130.556 173.698C131.872 174.382 133.022 175.579 133.681 176.944L157.539 228.366C159.516 232.636 164.449 234.344 168.566 232.293C172.676 230.245 174.323 225.119 172.347 220.848L136.316 143.12C142.896 137.652 144.049 127.575 138.781 120.741C136.81 118.007 134.011 116.128 130.72 115.102Z" fill="#073042" />
+<path d="M152.276 68.296C149.805 68.296 147.831 66.415 147.831 63.854C147.831 62.658 148.323 61.292 149.146 60.437C150.957 58.73 153.591 58.73 155.401 60.437C156.222 61.292 156.716 62.487 156.716 63.683C156.552 66.246 154.742 68.125 152.276 68.296ZM103.572 68.125C101.1 68.125 99.1288 66.075 99.1288 63.683C99.1288 62.487 99.6238 61.292 100.443 60.437C101.925 58.559 104.726 58.216 106.533 59.756H106.698C108.506 61.463 108.67 64.366 107.028 66.246L106.533 66.927C105.712 67.782 104.562 68.296 103.406 68.296L103.572 68.125ZM153.591 40.62L162.311 24.904C162.804 24.05 162.475 23.025 161.818 22.342C160.995 22 160.174 22.171 159.681 22.855L150.629 39.083C136.151 32.421 119.698 32.421 105.383 39.083L96.4978 23.025C96.1688 22.513 95.5088 22 94.8488 22C94.1918 22 93.5328 22.342 93.2018 23.025C92.8738 23.538 92.8738 24.391 93.2018 24.904L102.09 40.62C86.6208 49.33 76.5848 65.734 75.1078 83.841H180.737C179.424 65.564 169.221 49.33 153.755 40.62" fill="#3DDC84" />
+<path d="M197.37 117.839H190.459C190.128 118.007 189.8 118.349 189.8 118.861V232.466C189.8 232.977 190.128 233.319 190.625 233.319H197.863C206.254 233.319 213 226.143 213 217.603V101.95C213 110.662 206.254 117.667 197.863 117.667H197.37V117.839Z" fill="#073042" />
+</svg>
+
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-dart" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="#00C4B3" d="M87.4494 87.005L75.8113 75.3612L75.8563 159.463L75.9969 163.39C76.0532 165.246 76.4047 167.327 76.9672 169.493L169.147 202.005L192.209 191.796L192.229 191.762L87.4438 87.005H87.4494Z" /><path fill="#22D3C5" d="M76.97 169.493H76.9785C76.97 169.459 76.956 169.42 76.9391 169.38C76.9588 169.423 76.9588 169.465 76.9672 169.493H76.97ZM192.187 191.796L169.124 202.005L76.9588 169.493C78.7166 176.254 82.6175 183.853 86.8081 187.999L116.874 217.916L183.778 218L192.159 191.796H192.187Z" /><path fill="#0075C9" d="M76.1263 75.364L40.2866 129.491C37.311 132.669 38.796 139.227 43.5856 144.059L64.2744 164.917L77.2794 169.501C76.7169 167.341 76.3625 165.282 76.3091 163.398L76.1685 159.472L76.1263 75.3696V75.364Z" /><path fill="#0075C9" d="M169.906 76.4469C167.741 75.8984 165.665 75.5525 163.795 75.499L159.638 75.3472L75.8113 75.3669L192.226 191.765L202.453 168.702L169.912 76.4525L169.906 76.4469Z" /><path fill="#00A8E1" d="M169.799 76.4271C169.836 76.4412 169.875 76.4496 169.906 76.4553V76.444C169.87 76.4356 169.836 76.4356 169.799 76.4215V76.4271ZM188.404 86.3215C184.171 82.0606 176.676 78.1653 169.906 76.4553L202.447 168.697L192.209 191.759L217.19 183.777L217.246 115.287L188.401 86.3187L188.404 86.3215Z" /><path fill="#00C4B3" d="M165.344 63.5234L144.532 42.8234C139.677 38.0506 133.119 36.56 129.969 39.53L75.845 75.3613L159.672 75.3416L163.828 75.4934C165.699 75.5497 167.777 75.8928 169.94 76.4413L165.35 63.5178L165.344 63.5234Z" /></svg>
+        </g>
+        
+  
+    </symbol>
+    <symbol id="ico-git" viewBox="0 0 256 256">
+      <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
+          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#F03C2E" rx="60" /><g clip-path="url(#clip0_7_283)"><path fill="#fff" d="M224.225 119.094L136.906 31.775C135.711 30.5787 134.291 29.6298 132.729 28.9824C131.166 28.3349 129.491 28.0017 127.8 28.0017C126.109 28.0017 124.434 28.3349 122.871 28.9824C121.309 29.6298 119.889 30.5787 118.694 31.775L100.569 49.9L123.569 72.9C128.919 71.025 135.044 72.3062 139.306 76.5687C141.335 78.6014 142.752 81.1638 143.394 83.9632C144.036 86.7626 143.878 89.6862 142.937 92.4L165.106 114.569C170.469 112.719 176.656 113.912 180.937 118.206C182.361 119.63 183.49 121.32 184.26 123.18C185.03 125.04 185.426 127.033 185.426 129.046C185.425 131.059 185.029 133.052 184.258 134.912C183.487 136.771 182.358 138.461 180.934 139.884C179.511 141.308 177.821 142.436 175.961 143.206C174.101 143.977 172.108 144.373 170.095 144.372C168.082 144.372 166.088 143.975 164.229 143.205C162.369 142.434 160.679 141.305 159.256 139.881C154.756 135.381 153.644 128.756 155.919 123.212L135.244 102.537V156.944C136.745 157.686 138.116 158.666 139.306 159.844C140.729 161.267 141.858 162.956 142.629 164.816C143.399 166.675 143.795 168.668 143.795 170.681C143.795 172.694 143.399 174.687 142.629 176.546C141.858 178.406 140.729 180.096 139.306 181.519C137.883 182.942 136.193 184.071 134.334 184.841C132.474 185.611 130.481 186.008 128.469 186.008C126.456 186.008 124.463 185.611 122.604 184.841C120.744 184.071 119.054 182.942 117.631 181.519C116.206 180.096 115.076 178.407 114.305 176.548C113.533 174.688 113.136 172.694 113.136 170.681C113.136 168.668 113.533 166.675 114.305 164.815C115.076 162.955 116.206 161.266 117.631 159.844C119.112 158.369 120.756 157.25 122.65 156.5V101.587C120.825 100.837 119.112 99.7312 117.631 98.2437C115.479 96.0943 114.016 93.3526 113.428 90.3684C112.841 87.3841 113.155 84.2924 114.331 81.4875L91.6437 58.8125L31.7687 118.625C30.5716 119.821 29.6219 121.241 28.9739 122.804C28.3259 124.367 27.9924 126.042 27.9924 127.734C27.9924 129.426 28.3259 131.102 28.9739 132.665C29.6219 134.228 30.5716 135.648 31.7687 136.844L119.094 224.156C120.289 225.352 121.709 226.301 123.271 226.949C124.834 227.596 126.509 227.929 128.2 227.929C129.891 227.929 131.566 227.596 133.129 226.949C134.691 226.301 136.111 225.352 137.306 224.156L224.225 137.375C225.422 136.179 226.372 134.759 227.02 133.196C227.668 131.633 228.001 129.958 228.001 128.266C228.001 126.574 227.668 124.898 227.02 123.335C226.372 121.772 225.422 120.352 224.225 119.156" /></g><defs><clipPath id="clip0_7_283"><rect width="200" height="200" fill="#fff" transform="translate(28 28)" /></clipPath></defs></svg>
+        </g>
+        
+  
+    </symbol>
+  </defs>
+
+  <style><![CDATA[
+
+    /* General Typography & Arena Style */
+    .arena-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 900; fill: url(#neon-title); letter-spacing: 4px; text-anchor: middle; }
+    .arena-subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #94A3B8; letter-spacing: 2px; text-anchor: middle; }
+    .sector-tag { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 800; fill: #CBD5E1; letter-spacing: 2px; text-anchor: middle; }
+    .fighter-name { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 700; fill: #F8FAFC; text-anchor: middle; }
+    .vs-tag { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 900; fill: #F43F5E; text-anchor: middle; }
+    .hit-text { font-family: Impact, 'Arial Black', sans-serif; font-size: 13px; font-weight: 900; fill: #FEF08A; text-anchor: middle; }
+
+    /* Idle Stance Stride & Bob */
+    @keyframes fighter-bob {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* Fighter 1 (Left): Attacks at 18-24%, gets hit at 68-74% */
+    @keyframes f1-body {
+      0%, 10% { transform: translateX(0px) rotate(0deg); }
+      18% { transform: translateX(30px) rotate(8deg); } /* Lunge punch */
+      26% { transform: translateX(25px) rotate(4deg); }
+      35%, 60% { transform: translateX(0px) rotate(0deg); }
+      68% { transform: translateX(-22px) rotate(-16deg); } /* Hit recoil */
+      76% { transform: translateX(-15px) rotate(-8deg); }
+      88%, 100% { transform: translateX(0px) rotate(0deg); }
+    }
+    @keyframes f1-arm-lead {
+      0%, 10% { transform: rotate(-30deg); }
+      18% { transform: rotate(-95deg) scaleX(1.15); } /* Punch forward */
+      26% { transform: rotate(-80deg); }
+      35%, 60% { transform: rotate(-30deg); }
+      68% { transform: rotate(-135deg); } /* Knocked back */
+      76% { transform: rotate(-70deg); }
+      88%, 100% { transform: rotate(-30deg); }
+    }
+    @keyframes f1-arm-rear {
+      0%, 10% { transform: rotate(15deg); }
+      18% { transform: rotate(45deg); }
+      35%, 60% { transform: rotate(15deg); }
+      68% { transform: rotate(-90deg); }
+      88%, 100% { transform: rotate(15deg); }
+    }
+    @keyframes f1-leg-lead {
+      0%, 10% { transform: rotate(-15deg); }
+      18% { transform: rotate(-40deg); } /* Step forward */
+      35%, 60% { transform: rotate(-15deg); }
+      68% { transform: rotate(20deg); } /* Lift off */
+      88%, 100% { transform: rotate(-15deg); }
+    }
+    @keyframes f1-leg-rear {
+      0%, 10% { transform: rotate(15deg); }
+      18% { transform: rotate(35deg); }
+      35%, 60% { transform: rotate(15deg); }
+      68% { transform: rotate(25deg); }
+      88%, 100% { transform: rotate(15deg); }
+    }
+
+    /* Fighter 2 (Right, flipped): gets hit at 18-24%, attacks with high kick at 68-74% */
+    @keyframes f2-body {
+      0%, 10% { transform: translateX(0px) rotate(0deg); }
+      18% { transform: translateX(-22px) rotate(-18deg); } /* Recoil from punch */
+      26% { transform: translateX(-16px) rotate(-8deg); }
+      38%, 60% { transform: translateX(0px) rotate(0deg); }
+      68% { transform: translateX(28px) rotate(-8deg); } /* Flying Kick */
+      76% { transform: translateX(20px) rotate(-4deg); }
+      88%, 100% { transform: translateX(0px) rotate(0deg); }
+    }
+    @keyframes f2-arm-lead {
+      0%, 10% { transform: rotate(-25deg); }
+      18% { transform: rotate(-130deg); } /* Knocked back */
+      35%, 60% { transform: rotate(-25deg); }
+      68% { transform: rotate(40deg); } /* Balance */
+      88%, 100% { transform: rotate(-25deg); }
+    }
+    @keyframes f2-arm-rear {
+      0%, 10% { transform: rotate(20deg); }
+      18% { transform: rotate(-100deg); }
+      35%, 60% { transform: rotate(20deg); }
+      68% { transform: rotate(-40deg); }
+      88%, 100% { transform: rotate(20deg); }
+    }
+    @keyframes f2-leg-lead {
+      0%, 10% { transform: rotate(-15deg); }
+      18% { transform: rotate(25deg); } /* Stumble */
+      35%, 60% { transform: rotate(-15deg); }
+      68% { transform: rotate(-100deg) scaleY(1.1); } /* HIGH KICK! */
+      76% { transform: rotate(-80deg); }
+      88%, 100% { transform: rotate(-15deg); }
+    }
+    @keyframes f2-leg-rear {
+      0%, 10% { transform: rotate(15deg); }
+      18% { transform: rotate(30deg); }
+      35%, 60% { transform: rotate(15deg); }
+      68% { transform: rotate(15deg); }
+      88%, 100% { transform: rotate(15deg); }
+    }
+
+    /* Combat Impact Spark Effects */
+    @keyframes hit-burst-1 {
+      0%, 16% { opacity: 0; transform: scale(0.2); }
+      18% { opacity: 1; transform: scale(1.3); }
+      24% { opacity: 0.9; transform: scale(1.0); }
+      30% { opacity: 0; transform: scale(1.5); }
+      100% { opacity: 0; }
+    }
+    @keyframes hit-burst-2 {
+      0%, 66% { opacity: 0; transform: scale(0.2); }
+      68% { opacity: 1; transform: scale(1.3); }
+      74% { opacity: 0.9; transform: scale(1.0); }
+      80% { opacity: 0; transform: scale(1.5); }
+      100% { opacity: 0; }
+    }
+
+    /* HP Bar Reductions */
+    @keyframes hp-f1 {
+      0%, 66% { transform: scaleX(1); }
+      70% { transform: scaleX(0.55); }
+      90% { transform: scaleX(0.55); }
+      100% { transform: scaleX(1); }
+    }
+    @keyframes hp-f2 {
+      0%, 16% { transform: scaleX(1); }
+      20% { transform: scaleX(0.55); }
+      55% { transform: scaleX(0.55); }
+      100% { transform: scaleX(1); }
+    }
+
+    /* VS Pulse */
+    @keyframes vs-pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 6px #F43F5E); }
+    }
+
+    /* Background Ambience Sparks */
+    @keyframes spark-float {
+      0% { transform: translateY(0px) scale(0.8); opacity: 0.2; }
+      50% { transform: translateY(-25px) scale(1.2); opacity: 0.8; }
+      100% { transform: translateY(-50px) scale(0.8); opacity: 0; }
+    }
+
+  ]]></style>
+
+  <!-- Arena Container Background with Rounded Corners -->
+  <rect width="1000" height="340" rx="20" fill="url(#arena-bg)" stroke="#334155" stroke-width="1.5" />
+  <rect width="1000" height="340" rx="20" fill="url(#arena-grid)" />
+
+  <!-- Ambient Battle Sparks -->
+  <circle cx="684" cy="108" r="1.3" fill="#38BDF8" opacity="0.6" style="animation: spark-float 2.6s ease-in-out 1.0s infinite;" />
+<circle cx="722" cy="269" r="1.5" fill="#38BDF8" opacity="0.6" style="animation: spark-float 4.3s ease-in-out 0.3s infinite;" />
+<circle cx="125" cy="135" r="1.7" fill="#F43F5E" opacity="0.6" style="animation: spark-float 3.0s ease-in-out 2.1s infinite;" />
+<circle cx="459" cy="136" r="2.0" fill="#A855F7" opacity="0.6" style="animation: spark-float 3.4s ease-in-out 1.0s infinite;" />
+<circle cx="744" cy="188" r="2.1" fill="#FACC15" opacity="0.6" style="animation: spark-float 3.2s ease-in-out 0.5s infinite;" />
+<circle cx="134" cy="103" r="1.4" fill="#FACC15" opacity="0.6" style="animation: spark-float 3.3s ease-in-out 1.3s infinite;" />
+<circle cx="856" cy="91" r="2.2" fill="#4ADE80" opacity="0.6" style="animation: spark-float 4.0s ease-in-out 1.9s infinite;" />
+<circle cx="110" cy="221" r="2.1" fill="#FACC15" opacity="0.6" style="animation: spark-float 3.1s ease-in-out 2.2s infinite;" />
+<circle cx="621" cy="129" r="1.3" fill="#FACC15" opacity="0.6" style="animation: spark-float 3.9s ease-in-out 0.2s infinite;" />
+<circle cx="111" cy="139" r="1.5" fill="#FACC15" opacity="0.6" style="animation: spark-float 4.2s ease-in-out 1.3s infinite;" />
+<circle cx="196" cy="174" r="1.8" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.2s ease-in-out 2.3s infinite;" />
+<circle cx="653" cy="242" r="1.2" fill="#4ADE80" opacity="0.6" style="animation: spark-float 2.8s ease-in-out 2.6s infinite;" />
+<circle cx="306" cy="243" r="1.4" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.9s ease-in-out 0.8s infinite;" />
+<circle cx="264" cy="290" r="1.3" fill="#A855F7" opacity="0.6" style="animation: spark-float 2.6s ease-in-out 1.1s infinite;" />
+<circle cx="965" cy="225" r="1.8" fill="#4ADE80" opacity="0.6" style="animation: spark-float 4.3s ease-in-out 1.1s infinite;" />
+<circle cx="935" cy="244" r="1.3" fill="#F43F5E" opacity="0.6" style="animation: spark-float 3.4s ease-in-out 0.9s infinite;" />
+<circle cx="581" cy="147" r="1.7" fill="#FACC15" opacity="0.6" style="animation: spark-float 4.0s ease-in-out 1.5s infinite;" />
+<circle cx="254" cy="115" r="1.1" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.5s ease-in-out 0.3s infinite;" />
+<circle cx="186" cy="240" r="1.7" fill="#4ADE80" opacity="0.6" style="animation: spark-float 2.8s ease-in-out 2.4s infinite;" />
+<circle cx="420" cy="232" r="2.2" fill="#38BDF8" opacity="0.6" style="animation: spark-float 4.5s ease-in-out 1.9s infinite;" />
+<circle cx="726" cy="264" r="1.9" fill="#FACC15" opacity="0.6" style="animation: spark-float 2.7s ease-in-out 3.1s infinite;" />
+<circle cx="144" cy="155" r="2.1" fill="#FACC15" opacity="0.6" style="animation: spark-float 3.4s ease-in-out 1.6s infinite;" />
+<circle cx="542" cy="275" r="2.0" fill="#FACC15" opacity="0.6" style="animation: spark-float 2.9s ease-in-out 3.2s infinite;" />
+<circle cx="891" cy="243" r="1.4" fill="#A855F7" opacity="0.6" style="animation: spark-float 3.5s ease-in-out 0.7s infinite;" />
+<circle cx="582" cy="279" r="1.7" fill="#4ADE80" opacity="0.6" style="animation: spark-float 4.3s ease-in-out 3.2s infinite;" />
+<circle cx="49" cy="108" r="2.0" fill="#FACC15" opacity="0.6" style="animation: spark-float 4.4s ease-in-out 3.1s infinite;" />
+<circle cx="275" cy="94" r="1.1" fill="#4ADE80" opacity="0.6" style="animation: spark-float 3.0s ease-in-out 2.0s infinite;" />
+<circle cx="865" cy="97" r="1.2" fill="#4ADE80" opacity="0.6" style="animation: spark-float 4.5s ease-in-out 1.9s infinite;" />
+<circle cx="592" cy="122" r="1.5" fill="#A855F7" opacity="0.6" style="animation: spark-float 3.0s ease-in-out 3.1s infinite;" />
+<circle cx="582" cy="273" r="1.4" fill="#FACC15" opacity="0.6" style="animation: spark-float 4.0s ease-in-out 0.7s infinite;" />
+<circle cx="478" cy="212" r="1.1" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.4s ease-in-out 0.9s infinite;" />
+<circle cx="632" cy="221" r="1.1" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.0s ease-in-out 0.8s infinite;" />
+<circle cx="264" cy="97" r="1.1" fill="#A855F7" opacity="0.6" style="animation: spark-float 4.3s ease-in-out 3.0s infinite;" />
+<circle cx="315" cy="251" r="1.9" fill="#F43F5E" opacity="0.6" style="animation: spark-float 3.5s ease-in-out 1.9s infinite;" />
+<circle cx="620" cy="201" r="1.5" fill="#38BDF8" opacity="0.6" style="animation: spark-float 3.0s ease-in-out 1.7s infinite;" />
+
+  <!-- Arena Title & Header -->
+  <text x="500.0" y="36" class="arena-title">⚔️ TECH STACK BATTLE ARENA ⚔️</text>
+  <text x="500.0" y="55" class="arena-subtitle">EVERY FRAMEWORK FIGHTS FOR PERFECTION IN MY WORKFLOW</text>
+
+  <!-- All 4 Active Combat Arenas -->
+
+    <!-- BATTLE SECTOR 1: 📱 MOBILE CLASH -->
+    <g transform="translate(0, 0)" style="--cycle-t: 3.0s; --cycle-d: 0.0s;">
+      
+      <!-- Sector Floor Grid Line -->
+      <line x1="20.0" y1="286" x2="230.0" y2="286" stroke="url(#arena-line-grad)" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="125.0" cy="286" rx="70" ry="12" fill="url(#floor-spotlight)" opacity="0.3" />
+
+      <!-- Sector Header & VS Tag -->
+      <text x="125.0" y="314" class="sector-tag">📱 MOBILE CLASH</text>
+      <g transform="translate(125.0, 155)">
+        <text x="0" y="5" class="vs-tag" style="animation: vs-pulse 1.2s ease-in-out infinite;">VS</text>
+      </g>
+
+      <!-- Fighter 1 HP & Label -->
+      <g transform="translate(43.0, 145)">
+        <text x="32" y="-7" class="fighter-name">Flutter</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 0px 3px; animation: hp-f1 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 2 HP & Label -->
+      <g transform="translate(143.0, 145)">
+        <text x="32" y="-7" class="fighter-name">Kotlin</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 64px 3px; animation: hp-f2 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 1 Stickman -->
+      <g transform="translate(75.0, 250)">
+        
+    <!-- Stickman Fighter: flutter -->
+    <g class="b0-f1-container" transform="scale(1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b0-f1-body-group" style="animation: f1-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f1-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#38BDF8" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f1-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f1-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f1-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#38BDF8" style="filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#38BDF8" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#38BDF8" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(1, 1)">
+            <use href="#ico-flutter" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- Fighter 2 Stickman -->
+      <g transform="translate(175.0, 250)">
+        
+    <!-- Stickman Fighter: kotlin -->
+    <g class="b0-f2-container" transform="scale(-1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b0-f2-body-group" style="animation: f2-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f2-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#A855F7" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f2-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#A855F7" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#A855F7" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f2-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#A855F7" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f2-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#A855F7" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#A855F7" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#A855F7" style="filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#A855F7" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#A855F7" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(168, 85, 247, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(-1, 1)">
+            <use href="#ico-kotlin" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- POW! Impact Hit Burst from F1's Punch on F2 -->
+      <g transform="translate(150.0, 205)">
+        <g style="transform-origin: center; animation: hit-burst-1 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <!-- Starburst polygon -->
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#FACC15" stroke="#EA580C" stroke-width="2" style="filter: drop-shadow(0 0 6px #F97316);" />
+          <text x="0" y="4" class="hit-text">POW!</text>
+        </g>
+      </g>
+
+      <!-- BAM! Impact Hit Burst from F2's Kick on F1 -->
+      <g transform="translate(100.0, 230)">
+        <g style="transform-origin: center; animation: hit-burst-2 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#38BDF8" stroke="#2563EB" stroke-width="2" style="filter: drop-shadow(0 0 6px #38BDF8);" />
+          <text x="0" y="4" class="hit-text" style="fill: #FFFFFF;">BAM!</text>
+        </g>
+      </g>
+
+    </g>
+    
+
+    <!-- BATTLE SECTOR 2: ⚡ SCRIPTING WAR -->
+    <g transform="translate(0, 0)" style="--cycle-t: 3.2s; --cycle-d: 0.6s;">
+      
+      <!-- Sector Floor Grid Line -->
+      <line x1="270.0" y1="286" x2="480.0" y2="286" stroke="url(#arena-line-grad)" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="375.0" cy="286" rx="70" ry="12" fill="url(#floor-spotlight)" opacity="0.3" />
+
+      <!-- Sector Header & VS Tag -->
+      <text x="375.0" y="314" class="sector-tag">⚡ SCRIPTING WAR</text>
+      <g transform="translate(375.0, 155)">
+        <text x="0" y="5" class="vs-tag" style="animation: vs-pulse 1.2s ease-in-out infinite;">VS</text>
+      </g>
+
+      <!-- Fighter 1 HP & Label -->
+      <g transform="translate(293.0, 145)">
+        <text x="32" y="-7" class="fighter-name">Python</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 0px 3px; animation: hp-f1 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 2 HP & Label -->
+      <g transform="translate(393.0, 145)">
+        <text x="32" y="-7" class="fighter-name">JavaScript</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 64px 3px; animation: hp-f2 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 1 Stickman -->
+      <g transform="translate(325.0, 250)">
+        
+    <!-- Stickman Fighter: python -->
+    <g class="b1-f1-container" transform="scale(1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b1-f1-body-group" style="animation: f1-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f1-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#FBBF24" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f1-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#FBBF24" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f1-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f1-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#FBBF24" style="filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#FBBF24" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#FBBF24" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(251, 191, 36, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(1, 1)">
+            <use href="#ico-python" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- Fighter 2 Stickman -->
+      <g transform="translate(425.0, 250)">
+        
+    <!-- Stickman Fighter: js -->
+    <g class="b1-f2-container" transform="scale(-1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b1-f2-body-group" style="animation: f2-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f2-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#FACC15" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f2-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#FACC15" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#FACC15" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(250, 204, 21, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f2-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#FACC15" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f2-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#FACC15" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#FACC15" style="filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#FACC15" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#FACC15" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(250, 204, 21, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(-1, 1)">
+            <use href="#ico-js" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- POW! Impact Hit Burst from F1's Punch on F2 -->
+      <g transform="translate(400.0, 205)">
+        <g style="transform-origin: center; animation: hit-burst-1 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <!-- Starburst polygon -->
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#FACC15" stroke="#EA580C" stroke-width="2" style="filter: drop-shadow(0 0 6px #F97316);" />
+          <text x="0" y="4" class="hit-text">POW!</text>
+        </g>
+      </g>
+
+      <!-- BAM! Impact Hit Burst from F2's Kick on F1 -->
+      <g transform="translate(350.0, 230)">
+        <g style="transform-origin: center; animation: hit-burst-2 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#38BDF8" stroke="#2563EB" stroke-width="2" style="filter: drop-shadow(0 0 6px #38BDF8);" />
+          <text x="0" y="4" class="hit-text" style="fill: #FFFFFF;">BAM!</text>
+        </g>
+      </g>
+
+    </g>
+    
+
+    <!-- BATTLE SECTOR 3: 🛡️ TYPED SHOWDOWN -->
+    <g transform="translate(0, 0)" style="--cycle-t: 2.9s; --cycle-d: 1.2s;">
+      
+      <!-- Sector Floor Grid Line -->
+      <line x1="520.0" y1="286" x2="730.0" y2="286" stroke="url(#arena-line-grad)" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="625.0" cy="286" rx="70" ry="12" fill="url(#floor-spotlight)" opacity="0.3" />
+
+      <!-- Sector Header & VS Tag -->
+      <text x="625.0" y="314" class="sector-tag">🛡️ TYPED SHOWDOWN</text>
+      <g transform="translate(625.0, 155)">
+        <text x="0" y="5" class="vs-tag" style="animation: vs-pulse 1.2s ease-in-out infinite;">VS</text>
+      </g>
+
+      <!-- Fighter 1 HP & Label -->
+      <g transform="translate(543.0, 145)">
+        <text x="32" y="-7" class="fighter-name">TypeScript</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 0px 3px; animation: hp-f1 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 2 HP & Label -->
+      <g transform="translate(643.0, 145)">
+        <text x="32" y="-7" class="fighter-name">Java</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 64px 3px; animation: hp-f2 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 1 Stickman -->
+      <g transform="translate(575.0, 250)">
+        
+    <!-- Stickman Fighter: ts -->
+    <g class="b2-f1-container" transform="scale(1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b2-f1-body-group" style="animation: f1-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f1-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#60A5FA" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f1-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#60A5FA" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#60A5FA" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f1-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#60A5FA" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f1-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#60A5FA" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#60A5FA" style="filter: drop-shadow(0 0 4px rgba(96, 165, 250, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#60A5FA" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#60A5FA" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(96, 165, 250, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(1, 1)">
+            <use href="#ico-ts" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- Fighter 2 Stickman -->
+      <g transform="translate(675.0, 250)">
+        
+    <!-- Stickman Fighter: java -->
+    <g class="b2-f2-container" transform="scale(-1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b2-f2-body-group" style="animation: f2-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f2-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#FB923C" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f2-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#FB923C" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#FB923C" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f2-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#FB923C" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f2-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#FB923C" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#FB923C" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#FB923C" style="filter: drop-shadow(0 0 4px rgba(251, 146, 60, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#FB923C" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#FB923C" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(251, 146, 60, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(-1, 1)">
+            <use href="#ico-java" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- POW! Impact Hit Burst from F1's Punch on F2 -->
+      <g transform="translate(650.0, 205)">
+        <g style="transform-origin: center; animation: hit-burst-1 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <!-- Starburst polygon -->
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#FACC15" stroke="#EA580C" stroke-width="2" style="filter: drop-shadow(0 0 6px #F97316);" />
+          <text x="0" y="4" class="hit-text">POW!</text>
+        </g>
+      </g>
+
+      <!-- BAM! Impact Hit Burst from F2's Kick on F1 -->
+      <g transform="translate(600.0, 230)">
+        <g style="transform-origin: center; animation: hit-burst-2 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#38BDF8" stroke="#2563EB" stroke-width="2" style="filter: drop-shadow(0 0 6px #38BDF8);" />
+          <text x="0" y="4" class="hit-text" style="fill: #FFFFFF;">BAM!</text>
+        </g>
+      </g>
+
+    </g>
+    
+
+    <!-- BATTLE SECTOR 4: 💻 IDE BRAWL -->
+    <g transform="translate(0, 0)" style="--cycle-t: 3.1s; --cycle-d: 0.4s;">
+      
+      <!-- Sector Floor Grid Line -->
+      <line x1="770.0" y1="286" x2="980.0" y2="286" stroke="url(#arena-line-grad)" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="875.0" cy="286" rx="70" ry="12" fill="url(#floor-spotlight)" opacity="0.3" />
+
+      <!-- Sector Header & VS Tag -->
+      <text x="875.0" y="314" class="sector-tag">💻 IDE BRAWL</text>
+      <g transform="translate(875.0, 155)">
+        <text x="0" y="5" class="vs-tag" style="animation: vs-pulse 1.2s ease-in-out infinite;">VS</text>
+      </g>
+
+      <!-- Fighter 1 HP & Label -->
+      <g transform="translate(793.0, 145)">
+        <text x="32" y="-7" class="fighter-name">VS Code</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 0px 3px; animation: hp-f1 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 2 HP & Label -->
+      <g transform="translate(893.0, 145)">
+        <text x="32" y="-7" class="fighter-name">Android Studio</text>
+        <rect x="0" y="0" width="64" height="6.5" rx="3.2" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+        <g style="transform-origin: 64px 3px; animation: hp-f2 var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <rect x="1" y="1" width="62" height="4.5" rx="2.2" fill="url(#hp-grad)" />
+        </g>
+      </g>
+
+      <!-- Fighter 1 Stickman -->
+      <g transform="translate(825.0, 250)">
+        
+    <!-- Stickman Fighter: vscode -->
+    <g class="b3-f1-container" transform="scale(1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b3-f1-body-group" style="animation: f1-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f1-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#38BDF8" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f1-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f1-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f1-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#38BDF8" style="filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#38BDF8" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#38BDF8" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(1, 1)">
+            <use href="#ico-vscode" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- Fighter 2 Stickman -->
+      <g transform="translate(925.0, 250)">
+        
+    <!-- Stickman Fighter: androidstudio -->
+    <g class="b3-f2-container" transform="scale(-1, 1)">
+      <!-- Ground Shadow -->
+      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#000000" opacity="0.45" />
+
+      <!-- Full Body Group with combat motion -->
+      <g class="b3-f2-body-group" style="animation: f2-body var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+        
+        <!-- Rear Arm (dimmer for depth) -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -46px; animation: f2-arm-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-46" x2="-8" y2="-28" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="-8" y1="-28" x2="2" y2="-12" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+            <circle cx="2" cy="-12" r="3.5" fill="#4ADE80" />
+          </g>
+        </g>
+
+        <!-- Rear Leg -->
+        <g opacity="0.6">
+          <g style="transform-origin: 0px -10px; animation: f2-leg-rear var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+            <line x1="0" y1="-10" x2="10" y2="10" stroke="#4ADE80" stroke-width="5" stroke-linecap="round" />
+            <line x1="10" y1="10" x2="8" y2="34" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="8" y1="34" x2="14" y2="34" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <!-- Torso Spine with glow filter -->
+        <line x1="0" y1="-50" x2="0" y2="-10" stroke="#4ADE80" stroke-width="5.5" stroke-linecap="round" style="filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.7));" />
+
+        <!-- Lead Leg -->
+        <g style="transform-origin: 0px -10px; animation: f2-leg-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-10" x2="-12" y2="10" stroke="#4ADE80" stroke-width="5" stroke-linecap="round" />
+          <line x1="-12" y1="10" x2="-8" y2="34" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="-8" y1="34" x2="-2" y2="34" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Lead Arm -->
+        <g style="transform-origin: 0px -46px; animation: f2-arm-lead var(--cycle-t) ease-in-out var(--cycle-d) infinite;">
+          <line x1="0" y1="-46" x2="12" y2="-30" stroke="#4ADE80" stroke-width="5" stroke-linecap="round" />
+          <line x1="12" y1="-30" x2="22" y2="-18" stroke="#4ADE80" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="22" cy="-18" r="4.5" fill="#4ADE80" style="filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.7));" />
+        </g>
+
+        <!-- ICON HEAD (Attached to neck) -->
+        <g transform="translate(0, -66)">
+          <!-- Ambient Head Glow -->
+          <circle cx="0" cy="0" r="22" fill="#4ADE80" opacity="0.12" style="filter: blur(4px);" />
+          <!-- Head Base Rounded Squircle with tech border -->
+          <rect x="-20" y="-20" width="40" height="40" rx="10" fill="#181E2E" stroke="#4ADE80" stroke-width="2.2" style="filter: drop-shadow(0 2px 8px rgba(74, 222, 128, 0.7));" />
+          <!-- Render Icon Vector Inside Head -->
+          <g transform="scale(-1, 1)">
+            <use href="#ico-androidstudio" x="-16" y="-16" width="32" height="32" />
+          </g>
+        </g>
+
+      </g>
+    </g>
+
+      </g>
+
+      <!-- POW! Impact Hit Burst from F1's Punch on F2 -->
+      <g transform="translate(900.0, 205)">
+        <g style="transform-origin: center; animation: hit-burst-1 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <!-- Starburst polygon -->
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#FACC15" stroke="#EA580C" stroke-width="2" style="filter: drop-shadow(0 0 6px #F97316);" />
+          <text x="0" y="4" class="hit-text">POW!</text>
+        </g>
+      </g>
+
+      <!-- BAM! Impact Hit Burst from F2's Kick on F1 -->
+      <g transform="translate(850.0, 230)">
+        <g style="transform-origin: center; animation: hit-burst-2 var(--cycle-t) ease-out var(--cycle-d) infinite;">
+          <polygon points="0,-18 5,-8 17,-12 10,-2 20,4 9,8 14,18 3,12 -2,20 -7,10 -18,12 -11,2 -19,-6 -8,-7" fill="#38BDF8" stroke="#2563EB" stroke-width="2" style="filter: drop-shadow(0 0 6px #38BDF8);" />
+          <text x="0" y="4" class="hit-text" style="fill: #FFFFFF;">BAM!</text>
+        </g>
+      </g>
+
+    </g>
+    
+
+</svg>

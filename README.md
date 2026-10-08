@@ -16,176 +16,73 @@
 
 <div align="center">
 
-#### 📱 Mobile Development
-<p><sub>📦 <i>Klik salah satu Mystery Box untuk memecahkannya & memunculkan teknologi!</i></sub></p>
+  <!-- Stickman Tech Battle Arena Animation -->
+  <img src="image/tech-battle.svg" alt="Tech Stack Battle Arena" width="100%" />
 
-<table border="0" align="center">
-  <tr>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://flutter.dev" target="_blank" rel="noreferrer">
-          <img src="image/icons/flutter_burst.svg" width="64" height="64" alt="Flutter" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://dart.dev" target="_blank" rel="noreferrer">
-          <img src="image/icons/dart_burst.svg" width="64" height="64" alt="Dart" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
-          <img src="image/icons/kotlin_burst.svg" width="64" height="64" alt="Kotlin" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
-          <img src="image/icons/androidstudio_burst.svg" width="64" height="64" alt="Android Studio" />
-        </a>
-      </details>
-    </td>
-  </tr>
-</table>
+  <br/><br/>
+
+#### 📱 Mobile Development
+<p align="center">
+  <a href="https://flutter.dev" target="_blank" rel="noreferrer">
+    <img src="image/icons/flutter.svg" alt="Flutter" width="56" height="56" />
+  </a>
+  <a href="https://dart.dev" target="_blank" rel="noreferrer">
+    <img src="image/icons/dart.svg" alt="Dart" width="56" height="56" />
+  </a>
+  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
+    <img src="image/icons/kotlin.svg" alt="Kotlin" width="56" height="56" />
+  </a>
+  <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
+    <img src="image/icons/androidstudio.svg" alt="Android Studio" width="56" height="56" />
+  </a>
+</p>
 
 <br/>
 
 #### 💻 Programming Languages
-<p><sub>📦 <i>Klik salah satu Mystery Box untuk memecahkannya & memunculkan teknologi!</i></sub></p>
-
-<table border="0" align="center">
-  <tr>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://dart.dev" target="_blank" rel="noreferrer">
-          <img src="image/icons/dart_lang_burst.svg" width="64" height="64" alt="Dart" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://www.python.org" target="_blank" rel="noreferrer">
-          <img src="image/icons/python_burst.svg" width="64" height="64" alt="Python" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-          <img src="image/icons/js_burst.svg" width="64" height="64" alt="JavaScript" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">
-          <img src="image/icons/ts_burst.svg" width="64" height="64" alt="TypeScript" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://www.java.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/java_burst.svg" width="64" height="64" alt="Java" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
-          <img src="image/icons/kotlin_lang_burst.svg" width="64" height="64" alt="Kotlin" />
-        </a>
-      </details>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://dart.dev" target="_blank" rel="noreferrer">
+    <img src="image/icons/dart_lang.svg" alt="Dart" width="56" height="56" />
+  </a>
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="image/icons/python.svg" alt="Python" width="56" height="56" />
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+    <img src="image/icons/js.svg" alt="JavaScript" width="56" height="56" />
+  </a>
+  <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">
+    <img src="image/icons/ts.svg" alt="TypeScript" width="56" height="56" />
+  </a>
+  <a href="https://www.java.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/java.svg" alt="Java" width="56" height="56" />
+  </a>
+  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
+    <img src="image/icons/kotlin_lang.svg" alt="Kotlin" width="56" height="56" />
+  </a>
+</p>
 
 <br/>
 
 #### ⚙️ Tools & Workflow
-<p><sub>📦 <i>Klik salah satu Mystery Box untuk memecahkannya & memunculkan teknologi!</i></sub></p>
-
-<table border="0" align="center">
-  <tr>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://git-scm.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/git_burst.svg" width="64" height="64" alt="Git" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://github.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/github_burst.svg" width="64" height="64" alt="GitHub" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://code.visualstudio.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/vscode_burst.svg" width="64" height="64" alt="VS Code" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
-          <img src="image/icons/androidstudio_tool_burst.svg" width="64" height="64" alt="Android Studio" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://www.postman.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/postman_burst.svg" width="64" height="64" alt="Postman" />
-        </a>
-      </details>
-    </td>
-    <td align="center" width="90">
-      <details>
-        <summary><img src="image/icons/mystery_box.svg" width="64" height="64" alt="Mystery Box" /></summary>
-        <br/>
-        <a href="https://www.figma.com" target="_blank" rel="noreferrer">
-          <img src="image/icons/figma_burst.svg" width="64" height="64" alt="Figma" />
-        </a>
-      </details>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://git-scm.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/git.svg" alt="Git" width="56" height="56" />
+  </a>
+  <a href="https://github.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/github.svg" alt="GitHub" width="56" height="56" />
+  </a>
+  <a href="https://code.visualstudio.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/vscode.svg" alt="VS Code" width="56" height="56" />
+  </a>
+  <a href="https://developer.android.com/studio" target="_blank" rel="noreferrer">
+    <img src="image/icons/androidstudio_tool.svg" alt="Android Studio" width="56" height="56" />
+  </a>
+  <a href="https://www.postman.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/postman.svg" alt="Postman" width="56" height="56" />
+  </a>
+  <a href="https://www.figma.com" target="_blank" rel="noreferrer">
+    <img src="image/icons/figma.svg" alt="Figma" width="56" height="56" />
+  </a>
+</p>
 
 </div>
