@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Arrow Maze — Labirin Panah Satu Arah</title>
+  <meta name="description" content="Game teka-teki web interaktif labirin panah satu arah (Arrow Maze). Navigasikan titik pemain mengikuti jalur panah hingga garis finish!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Area -->
+    <header class="game-header">
+      <div class="brand">
+        <span class="brand-badge">MINI GAME</span>
+        <h1 class="game-title">Arrow Maze</h1>
+        <p class="game-subtitle">Labirin Panah Satu Arah</p>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-panel">
+        <div class="stat-card" id="level-display">
+          <span class="stat-label">Level</span>
+          <span class="stat-value" id="current-level-text">1</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Langkah</span>
+          <span class="stat-value" id="move-counter">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Waktu</span>
+          <span class="stat-value" id="timer-display">00:00</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Toolbar / Controls -->
+    <div class="action-toolbar">
+      <div class="level-selector-wrapper">
+        <label for="level-select" class="sr-only">Pilih Level</label>
+        <select id="level-select" class="styled-select" aria-label="Pilih Level">
+          <option value="0">Level 1 (Mudah - 5x5)</option>
+          <option value="1">Level 2 (Sedang - 6x6)</option>
+          <option value="2">Level 3 (Sulit - 7x7)</option>
+          <option value="random">Level Acak (Generated)</option>
+        </select>
+      </div>
+
+      <div class="tool-buttons">
+        <button id="btn-undo" class="tool-btn" title="Urungkan Langkah (Z)" aria-label="Undo">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span class="btn-text">Undo</span>
+        </button>
+
+        <button id="btn-reset" class="tool-btn" title="Ulangi Level (R)" aria-label="Reset">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-1.19"></path>
+          </svg>
+          <span class="btn-text">Reset</span>
+        </button>
+
+        <button id="btn-sound" class="tool-btn icon-only" title="Suara Aktif/Nonaktif" aria-label="Sound Toggle">
+          <svg id="sound-icon-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg id="sound-icon-off" class="hidden" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <button id="btn-help" class="tool-btn icon-only" title="Panduan Bermain" aria-label="Bantuan">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Maze Canvas Container -->
+    <main class="canvas-wrapper">
+      <div class="canvas-frame" id="canvas-frame">
+        <canvas id="maze-canvas"></canvas>
+        <div id="rejection-feedback" class="rejection-feedback hidden">Arah tidak diizinkan! 🚫</div>
+      </div>
+    </main>
+
+    <!-- Legend / Quick Guide -->
+    <div class="quick-legend">
+      <div class="legend-item">
+        <span class="legend-indicator start-dot"></span>
+        <span>Awal (Start)</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-indicator player-dot"></span>
+        <span>Pemain</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-indicator finish-dot"></span>
+        <span>Tujuan (Goal)</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-indicator trail-line"></span>
+        <span>Jejak Langkah</span>
+      </div>
+    </div>
+
+    <!-- Mobile Virtual D-Pad -->
+    <div class="mobile-controls" id="mobile-dpad">
+      <div class="dpad-grid">
+        <button id="dpad-up" class="dpad-btn dpad-up" aria-label="Atas">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+        <button id="dpad-left" class="dpad-btn dpad-left" aria-label="Kiri">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="dpad-center"></div>
+        <button id="dpad-right" class="dpad-btn dpad-right" aria-label="Kanan">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <button id="dpad-down" class="dpad-btn dpad-down" aria-label="Bawah">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Victory Modal -->
+  <div id="victory-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-confetti-badge">🎉🏆</div>
+      <h2 id="modal-title" class="modal-title">Selamat! Anda Berhasil!</h2>
+      <p class="modal-desc">Anda berhasil menaklukkan labirin panah dengan sukses.</p>
+
+      <div class="modal-stats">
+        <div class="modal-stat-box">
+          <span class="label">Total Langkah</span>
+          <span class="val" id="win-moves">0</span>
+        </div>
+        <div class="modal-stat-box">
+          <span class="label">Total Waktu</span>
+          <span class="val" id="win-time">00:00</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button id="btn-next-level" class="btn-primary">Level Berikutnya ➔</button>
+        <button id="btn-replay" class="btn-secondary">Main Ulang ↺</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help / Guide Modal -->
+  <div id="help-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-card help-card">
+      <button id="btn-close-help" class="modal-close-btn" aria-label="Tutup">&times;</button>
+      <h2 class="modal-title">Cara Bermain</h2>
+      <ul class="help-list">
+        <li><strong>Tujuan:</strong> Gerakkan titik oranye dari titik awal (lingkaran biru) ke titik tujuan (bintang/emas).</li>
+        <li><strong>Aturan Satu Arah:</strong> Anda <em>hanya bisa melangkah mengikuti arah mata panah</em> pada segmen garis. Gerakan melawan arah panah akan ditolak!</li>
+        <li><strong>Kontrol:</strong>
+          <ul>
+            <li><strong>Desktop:</strong> Tombol Panah (Arrow Keys) atau <code>W, A, S, D</code>.</li>
+            <li><strong>Mobile/HP:</strong> Gunakan D-Pad virtual di bagian bawah layar atau usap (swipe) pada labirin.</li>
+          </ul>
+        </li>
+        <li><strong>Bantuan:</strong>
+          <ul>
+            <li><strong>Undo:</strong> Tombol Undo (atau tombol <code>Z</code>) untuk membatalkan langkah terakhir jika salah jalan.</li>
+            <li><strong>Reset:</strong> Tombol Reset (atau tombol <code>R</code>) untuk mengulang dari awal jika terjebak di jalan buntu.</li>
+          </ul>
+        </li>
+      </ul>
+      <button id="btn-understood" class="btn-primary" style="margin-top: 18px; width: 100%;">Saya Mengerti, Mulai!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
