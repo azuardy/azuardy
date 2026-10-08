@@ -1,10 +1,4 @@
 <div align="center">
-  <img src="image/github-header-banner.png" alt="Header Banner" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
   <a href="https://github.com/azuardy">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=520&lines=Hi+there%2C+I'm+Azuardy+%F0%9F%91%8B;Software+Engineer+%7C+Mobile+Developer;Building+Cross-Platform+Apps+with+Flutter;Turning+complex+problems+into+elegant+code" alt="Typing SVG" />
   </a>
@@ -35,7 +29,6 @@
 - 💻 **Multi-Language Knowledge**: Proficient in **Dart**, **Python**, and **Java** for logic, backend scripting, and mobile foundations.
 - 🎨 **User Experience**: Dedicated to pixel-perfect layouts, interactive animations, and smooth touch feedback.
 - 💬 **Let's Talk About**: Flutter architecture, Dart programming, animations, and cross-platform UI.
-- 📫 **Contact Me**: Reach out directly at [azuardesky@gmail.com](mailto:azuardesky@gmail.com).
 
 ---
 
@@ -70,22 +63,3 @@
   </a>
 </div>
 
----
-
-### 📬 Connect With Me
-
-<div align="center">
-  <a href="mailto:azuardesky@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-azuardesky%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/azuardy" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-azuardy-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</div>
-
-<br />
-
-<div align="center">
-  <sub>⭐️ Designed with precision & passion by <a href="https://github.com/azuardy"><b>Azuardy</b></a></sub>
-</div>
