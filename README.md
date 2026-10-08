@@ -2,6 +2,10 @@
   <img src="image/github-header-banner.png" alt="Header Banner" width="100%" />
 </div>
 
+<div align="center">
+  <img src="image/animasi.gif" alt="Animation" width="480" />
+</div>
+
 ---
 
 ### 🛠️ Tech Stack & Skills
@@ -30,8 +34,3 @@
 
 </div>
 
----
-
-<div align="center">
-  <img src="image/animasi.svg" alt="Animation" width="280" />
-</div>
