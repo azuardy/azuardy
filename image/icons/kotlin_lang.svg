@@ -1,48 +1,331 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 -35 256 326" fill="none" overflow="visible">
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="-40 -40 336 336" fill="none" overflow="visible">
   <defs>
-    <filter id="glow-kotlin_lang" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(127, 82, 255, 0.65)" flood-opacity="0.45"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(0, 0, 0, 0.45)"/>
+    <!-- Glow filter for mystery box -->
+    <filter id="box-glow-kotlin_lang" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#38BDF8" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.6)"/>
     </filter>
+
+    <!-- Glow filter for revealed icon -->
+    <filter id="icon-glow-kotlin_lang" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="rgba(127, 82, 255, 0.75)" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+
+    <!-- Mystery Box Gradient -->
+    <linearGradient id="box-grad-kotlin_lang" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Golden/Cyan Accent Border Gradient -->
+    <linearGradient id="border-grad-kotlin_lang" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Burst Energy Gradient -->
+    <radialGradient id="energy-burst-kotlin_lang" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="rgba(127, 82, 255, 0.75)" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <style>
-    @keyframes float_kotlin_lang {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
+
+  <style><![CDATA[
+    /* Box Rumble and Dissolve Animation */
+    @keyframes box_anim_kotlin_lang {
+      0%, 15% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
       }
-      25% {
-        transform: translateY(-5px) rotate(1.2deg);
+      18% {
+        transform: translateY(-2px) scale(1.02) rotate(-2deg);
       }
-      50% {
-        transform: translateY(-11px) rotate(0deg);
+      21% {
+        transform: translateY(2px) scale(1.02) rotate(2deg);
       }
-      75% {
-        transform: translateY(-5px) rotate(-1.2deg);
+      24% {
+        transform: translateY(-4px) scale(1.04) rotate(-3deg);
+      }
+      27% {
+        transform: translateY(4px) scale(1.06) rotate(3deg);
+      }
+      29% {
+        transform: translateY(-2px) scale(1.08) rotate(-1deg);
+      }
+      31% {
+        transform: scale(1.12);
+        opacity: 1;
+      }
+      33% {
+        /* Explodes away */
+        transform: scale(1.25);
+        opacity: 0;
+      }
+      86% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      91%, 100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
     }
-    .animated-badge {
-      animation: float_kotlin_lang 3.5s ease-in-out infinite;
+
+    /* Question mark pulsing */
+    @keyframes q_pulse_kotlin_lang {
+      0%, 15% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px #38BDF8);
+      }
+      20%, 30% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 16px #38BDF8) drop-shadow(0 0 25px #C084FC);
+      }
+      33% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+      90% {
+        opacity: 0;
+      }
+      95%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Shard 1 (Top-Left) */
+    @keyframes shard_tl_kotlin_lang {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 2 (Top-Right) */
+    @keyframes shard_tr_kotlin_lang {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 3 (Bottom-Left) */
+    @keyframes shard_bl_kotlin_lang {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 4 (Bottom-Right) */
+    @keyframes shard_br_kotlin_lang {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Blast wave circle */
+    @keyframes blast_wave_kotlin_lang {
+      0%, 31% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+        transform: scale(0.2);
+      }
+      38% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    /* Revealed Icon Burst & Floating */
+    @keyframes icon_reveal_kotlin_lang {
+      0%, 31% {
+        transform: scale(0) rotate(-15deg);
+        opacity: 0;
+      }
+      34% {
+        /* Explosive Overshoot */
+        transform: scale(1.22) rotate(3deg);
+        opacity: 1;
+      }
+      38% {
+        transform: scale(0.96) rotate(-1deg);
+        opacity: 1;
+      }
+      42% {
+        transform: scale(1.0) translateY(0px) rotate(0deg);
+        opacity: 1;
+      }
+      60% {
+        /* Gentle float up */
+        transform: translateY(-8px) scale(1.02);
+        opacity: 1;
+      }
+      78% {
+        /* Gentle float down */
+        transform: translateY(0px) scale(1.0);
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+        transform: scale(1.0);
+      }
+      89% {
+        /* Shrinks back to box */
+        opacity: 0;
+        transform: scale(0.4) rotate(10deg);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+
+    .box-group {
+      animation: box_anim_kotlin_lang 6.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       animation-delay: 2.0s;
       transform-origin: 128px 128px;
-      filter: url(#glow-kotlin_lang);
     }
-  </style>
-  <g class="animated-badge">
-    <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
-          <svg width="256" height="256" viewBox="0 0 256 256" fill="none">
-<rect width="256" height="256" rx="60" fill="#242938" />
-<path d="M218 218H38V38H218L128 128L218 218Z" fill="url(#paint0_linear_7_120)" />
-<defs>
+    .question-mark {
+      animation: q_pulse_kotlin_lang 6.5s ease-in-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 128px 128px;
+    }
+    .shard-tl {
+      animation: shard_tl_kotlin_lang 6.5s ease-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 64px 64px;
+    }
+    .shard-tr {
+      animation: shard_tr_kotlin_lang 6.5s ease-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 192px 64px;
+    }
+    .shard-bl {
+      animation: shard_bl_kotlin_lang 6.5s ease-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 64px 192px;
+    }
+    .shard-br {
+      animation: shard_br_kotlin_lang 6.5s ease-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 192px 192px;
+    }
+    .blast-circle {
+      animation: blast_wave_kotlin_lang 6.5s ease-out infinite;
+      animation-delay: 2.0s;
+      transform-origin: 128px 128px;
+    }
+    .icon-reveal-group {
+      animation: icon_reveal_kotlin_lang 6.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+      animation-delay: 2.0s;
+      transform-origin: 128px 128px;
+      filter: url(#icon-glow-kotlin_lang);
+    }
+  ]]></style>
+
+  <!-- BLAST SHOCKWAVE CIRCLE -->
+  <circle class="blast-circle" cx="128" cy="128" r="90" fill="url(#energy-burst-kotlin_lang)"/>
+
+  <!-- MYSTERY BOX GROUP -->
+  <g class="box-group" filter="url(#box-glow-kotlin_lang)">
+    <!-- Box Body -->
+    <rect x="12" y="12" width="232" height="232" rx="56" fill="url(#box-grad-kotlin_lang)" stroke="url(#border-grad-kotlin_lang)" stroke-width="6"/>
+
+    <!-- Cyber / Lucky Block Corner Rivets -->
+    <circle cx="48" cy="48" r="8" fill="#38BDF8" opacity="0.8"/>
+    <circle cx="208" cy="48" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="48" cy="208" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="208" cy="208" r="8" fill="#C084FC" opacity="0.8"/>
+
+    <!-- Stylized Question Mark "?" -->
+    <g class="question-mark">
+      <text x="128" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace" font-size="135" font-weight="900" fill="#38BDF8" text-anchor="middle">?</text>
+    </g>
+  </g>
+
+  <!-- SHATTERS / FLYING SHARDS -->
+  <g>
+    <!-- Shard TL -->
+    <path class="shard-tl" d="M12 12 H128 L110 128 L12 100 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <!-- Shard TR -->
+    <path class="shard-tr" d="M128 12 H244 L244 110 L140 128 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BL -->
+    <path class="shard-bl" d="M12 100 L110 128 L128 244 H12 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BR -->
+    <path class="shard-br" d="M140 128 L244 110 L244 244 H128 Z" fill="#020617" stroke="#C084FC" stroke-width="4"/>
+  </g>
+
+  <!-- REVEALED ICON LAYER -->
+  <g class="icon-reveal-group">
+        <rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" rx="60" fill="#242938" />
+
+        <path xmlns="http://www.w3.org/2000/svg" d="M218 218H38V38H218L128 128L218 218Z" fill="url(#paint0_linear_7_120)" />
+
+        <defs xmlns="http://www.w3.org/2000/svg">
 <linearGradient id="paint0_linear_7_120" x1="218" y1="38" x2="38" y2="218" gradientUnits="userSpaceOnUse">
 <stop offset="0.00343514" stop-color="#E44857" />
 <stop offset="0.4689" stop-color="#C711E1" />
 <stop offset="1" stop-color="#7F52FF" />
 </linearGradient>
 </defs>
-</svg>
 
-        </g>
-        
-  
   </g>
 </svg>

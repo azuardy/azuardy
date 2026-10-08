@@ -1,37 +1,322 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 -35 256 326" fill="none" overflow="visible">
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="-40 -40 336 336" fill="none" overflow="visible">
   <defs>
-    <filter id="glow-ts" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(49, 120, 198, 0.65)" flood-opacity="0.45"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(0, 0, 0, 0.45)"/>
+    <!-- Glow filter for mystery box -->
+    <filter id="box-glow-ts" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#38BDF8" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.6)"/>
     </filter>
+
+    <!-- Glow filter for revealed icon -->
+    <filter id="icon-glow-ts" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="rgba(49, 120, 198, 0.75)" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+
+    <!-- Mystery Box Gradient -->
+    <linearGradient id="box-grad-ts" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Golden/Cyan Accent Border Gradient -->
+    <linearGradient id="border-grad-ts" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Burst Energy Gradient -->
+    <radialGradient id="energy-burst-ts" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="rgba(49, 120, 198, 0.75)" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <style>
-    @keyframes float_ts {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
+
+  <style><![CDATA[
+    /* Box Rumble and Dissolve Animation */
+    @keyframes box_anim_ts {
+      0%, 15% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
       }
-      25% {
-        transform: translateY(-5px) rotate(1.2deg);
+      18% {
+        transform: translateY(-2px) scale(1.02) rotate(-2deg);
       }
-      50% {
-        transform: translateY(-11px) rotate(0deg);
+      21% {
+        transform: translateY(2px) scale(1.02) rotate(2deg);
       }
-      75% {
-        transform: translateY(-5px) rotate(-1.2deg);
+      24% {
+        transform: translateY(-4px) scale(1.04) rotate(-3deg);
+      }
+      27% {
+        transform: translateY(4px) scale(1.06) rotate(3deg);
+      }
+      29% {
+        transform: translateY(-2px) scale(1.08) rotate(-1deg);
+      }
+      31% {
+        transform: scale(1.12);
+        opacity: 1;
+      }
+      33% {
+        /* Explodes away */
+        transform: scale(1.25);
+        opacity: 0;
+      }
+      86% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      91%, 100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
     }
-    .animated-badge {
-      animation: float_ts 3.6s ease-in-out infinite;
+
+    /* Question mark pulsing */
+    @keyframes q_pulse_ts {
+      0%, 15% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px #38BDF8);
+      }
+      20%, 30% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 16px #38BDF8) drop-shadow(0 0 25px #C084FC);
+      }
+      33% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+      90% {
+        opacity: 0;
+      }
+      95%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Shard 1 (Top-Left) */
+    @keyframes shard_tl_ts {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 2 (Top-Right) */
+    @keyframes shard_tr_ts {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 3 (Bottom-Left) */
+    @keyframes shard_bl_ts {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 4 (Bottom-Right) */
+    @keyframes shard_br_ts {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Blast wave circle */
+    @keyframes blast_wave_ts {
+      0%, 31% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+        transform: scale(0.2);
+      }
+      38% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    /* Revealed Icon Burst & Floating */
+    @keyframes icon_reveal_ts {
+      0%, 31% {
+        transform: scale(0) rotate(-15deg);
+        opacity: 0;
+      }
+      34% {
+        /* Explosive Overshoot */
+        transform: scale(1.22) rotate(3deg);
+        opacity: 1;
+      }
+      38% {
+        transform: scale(0.96) rotate(-1deg);
+        opacity: 1;
+      }
+      42% {
+        transform: scale(1.0) translateY(0px) rotate(0deg);
+        opacity: 1;
+      }
+      60% {
+        /* Gentle float up */
+        transform: translateY(-8px) scale(1.02);
+        opacity: 1;
+      }
+      78% {
+        /* Gentle float down */
+        transform: translateY(0px) scale(1.0);
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+        transform: scale(1.0);
+      }
+      89% {
+        /* Shrinks back to box */
+        opacity: 0;
+        transform: scale(0.4) rotate(10deg);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+
+    .box-group {
+      animation: box_anim_ts 6.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       animation-delay: 1.2s;
       transform-origin: 128px 128px;
-      filter: url(#glow-ts);
     }
-  </style>
-  <g class="animated-badge">
-    <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
-          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#007ACC" rx="60" /><path fill="#fff" d="M56.6112 128.849L56.5299 139.333H73.1902H89.8505L89.8505 186.673V234.012H101.635H113.419V186.673L113.419 139.333H130.079H146.739V129.052C146.739 123.363 146.618 118.609 146.455 118.487C146.333 118.325 126.056 118.243 101.472 118.284L56.7331 118.406L56.6112 128.849Z" /><path fill="#fff" d="M206.567 118.108C213.068 119.734 218.026 122.619 222.577 127.332C224.934 129.852 228.428 134.444 228.713 135.541C228.794 135.866 217.66 143.343 210.915 147.528C210.671 147.691 209.695 146.634 208.598 145.009C205.307 140.214 201.853 138.141 196.57 137.776C188.809 137.247 183.811 141.311 183.852 148.097C183.852 150.088 184.136 151.266 184.949 152.892C186.655 156.427 189.825 158.54 199.781 162.847C218.107 170.731 225.949 175.932 230.826 183.327C236.271 191.576 237.49 204.742 233.792 214.535C229.729 225.181 219.651 232.414 205.469 234.812C201.081 235.584 190.678 235.462 185.965 234.609C175.684 232.78 165.932 227.701 159.918 221.037C157.561 218.436 152.969 211.65 153.254 211.162C153.375 211 154.432 210.35 155.61 209.659C156.748 209.009 161.056 206.53 165.119 204.173L172.474 199.906L174.018 202.182C176.172 205.473 180.885 209.984 183.73 211.487C191.897 215.795 203.113 215.185 208.639 210.228C210.996 208.074 211.971 205.839 211.971 202.548C211.971 199.581 211.605 198.281 210.061 196.046C208.07 193.202 204.007 190.804 192.466 185.806C179.26 180.117 173.571 176.582 168.37 170.974C165.363 167.724 162.518 162.522 161.34 158.174C160.365 154.558 160.121 145.496 160.893 141.839C163.615 129.08 173.246 120.181 187.143 117.539C191.654 116.686 202.137 117.011 206.567 118.108Z" /></svg>
-        </g>
-        
-  
+    .question-mark {
+      animation: q_pulse_ts 6.5s ease-in-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 128px 128px;
+    }
+    .shard-tl {
+      animation: shard_tl_ts 6.5s ease-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 64px 64px;
+    }
+    .shard-tr {
+      animation: shard_tr_ts 6.5s ease-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 192px 64px;
+    }
+    .shard-bl {
+      animation: shard_bl_ts 6.5s ease-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 64px 192px;
+    }
+    .shard-br {
+      animation: shard_br_ts 6.5s ease-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 192px 192px;
+    }
+    .blast-circle {
+      animation: blast_wave_ts 6.5s ease-out infinite;
+      animation-delay: 1.2s;
+      transform-origin: 128px 128px;
+    }
+    .icon-reveal-group {
+      animation: icon_reveal_ts 6.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+      animation-delay: 1.2s;
+      transform-origin: 128px 128px;
+      filter: url(#icon-glow-ts);
+    }
+  ]]></style>
+
+  <!-- BLAST SHOCKWAVE CIRCLE -->
+  <circle class="blast-circle" cx="128" cy="128" r="90" fill="url(#energy-burst-ts)"/>
+
+  <!-- MYSTERY BOX GROUP -->
+  <g class="box-group" filter="url(#box-glow-ts)">
+    <!-- Box Body -->
+    <rect x="12" y="12" width="232" height="232" rx="56" fill="url(#box-grad-ts)" stroke="url(#border-grad-ts)" stroke-width="6"/>
+
+    <!-- Cyber / Lucky Block Corner Rivets -->
+    <circle cx="48" cy="48" r="8" fill="#38BDF8" opacity="0.8"/>
+    <circle cx="208" cy="48" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="48" cy="208" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="208" cy="208" r="8" fill="#C084FC" opacity="0.8"/>
+
+    <!-- Stylized Question Mark "?" -->
+    <g class="question-mark">
+      <text x="128" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace" font-size="135" font-weight="900" fill="#38BDF8" text-anchor="middle">?</text>
+    </g>
+  </g>
+
+  <!-- SHATTERS / FLYING SHARDS -->
+  <g>
+    <!-- Shard TL -->
+    <path class="shard-tl" d="M12 12 H128 L110 128 L12 100 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <!-- Shard TR -->
+    <path class="shard-tr" d="M128 12 H244 L244 110 L140 128 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BL -->
+    <path class="shard-bl" d="M12 100 L110 128 L128 244 H12 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BR -->
+    <path class="shard-br" d="M140 128 L244 110 L244 244 H128 Z" fill="#020617" stroke="#C084FC" stroke-width="4"/>
+  </g>
+
+  <!-- REVEALED ICON LAYER -->
+  <g class="icon-reveal-group">
+        <rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="#007ACC" rx="60" />
+        <path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M56.6112 128.849L56.5299 139.333H73.1902H89.8505L89.8505 186.673V234.012H101.635H113.419V186.673L113.419 139.333H130.079H146.739V129.052C146.739 123.363 146.618 118.609 146.455 118.487C146.333 118.325 126.056 118.243 101.472 118.284L56.7331 118.406L56.6112 128.849Z" />
+        <path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M206.567 118.108C213.068 119.734 218.026 122.619 222.577 127.332C224.934 129.852 228.428 134.444 228.713 135.541C228.794 135.866 217.66 143.343 210.915 147.528C210.671 147.691 209.695 146.634 208.598 145.009C205.307 140.214 201.853 138.141 196.57 137.776C188.809 137.247 183.811 141.311 183.852 148.097C183.852 150.088 184.136 151.266 184.949 152.892C186.655 156.427 189.825 158.54 199.781 162.847C218.107 170.731 225.949 175.932 230.826 183.327C236.271 191.576 237.49 204.742 233.792 214.535C229.729 225.181 219.651 232.414 205.469 234.812C201.081 235.584 190.678 235.462 185.965 234.609C175.684 232.78 165.932 227.701 159.918 221.037C157.561 218.436 152.969 211.65 153.254 211.162C153.375 211 154.432 210.35 155.61 209.659C156.748 209.009 161.056 206.53 165.119 204.173L172.474 199.906L174.018 202.182C176.172 205.473 180.885 209.984 183.73 211.487C191.897 215.795 203.113 215.185 208.639 210.228C210.996 208.074 211.971 205.839 211.971 202.548C211.971 199.581 211.605 198.281 210.061 196.046C208.07 193.202 204.007 190.804 192.466 185.806C179.26 180.117 173.571 176.582 168.37 170.974C165.363 167.724 162.518 162.522 161.34 158.174C160.365 154.558 160.121 145.496 160.893 141.839C163.615 129.08 173.246 120.181 187.143 117.539C191.654 116.686 202.137 117.011 206.567 118.108Z" />
   </g>
 </svg>

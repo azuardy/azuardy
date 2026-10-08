@@ -1,37 +1,323 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 -35 256 326" fill="none" overflow="visible">
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="-40 -40 336 336" fill="none" overflow="visible">
   <defs>
-    <filter id="glow-python" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(255, 212, 59, 0.65)" flood-opacity="0.45"/>
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(0, 0, 0, 0.45)"/>
+    <!-- Glow filter for mystery box -->
+    <filter id="box-glow-python" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#38BDF8" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.6)"/>
     </filter>
+
+    <!-- Glow filter for revealed icon -->
+    <filter id="icon-glow-python" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="rgba(255, 212, 59, 0.75)" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+
+    <!-- Mystery Box Gradient -->
+    <linearGradient id="box-grad-python" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Golden/Cyan Accent Border Gradient -->
+    <linearGradient id="border-grad-python" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Burst Energy Gradient -->
+    <radialGradient id="energy-burst-python" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="rgba(255, 212, 59, 0.75)" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <style>
-    @keyframes float_python {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
+
+  <style><![CDATA[
+    /* Box Rumble and Dissolve Animation */
+    @keyframes box_anim_python {
+      0%, 15% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
       }
-      25% {
-        transform: translateY(-5px) rotate(1.2deg);
+      18% {
+        transform: translateY(-2px) scale(1.02) rotate(-2deg);
       }
-      50% {
-        transform: translateY(-11px) rotate(0deg);
+      21% {
+        transform: translateY(2px) scale(1.02) rotate(2deg);
       }
-      75% {
-        transform: translateY(-5px) rotate(-1.2deg);
+      24% {
+        transform: translateY(-4px) scale(1.04) rotate(-3deg);
+      }
+      27% {
+        transform: translateY(4px) scale(1.06) rotate(3deg);
+      }
+      29% {
+        transform: translateY(-2px) scale(1.08) rotate(-1deg);
+      }
+      31% {
+        transform: scale(1.12);
+        opacity: 1;
+      }
+      33% {
+        /* Explodes away */
+        transform: scale(1.25);
+        opacity: 0;
+      }
+      86% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      91%, 100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
     }
-    .animated-badge {
-      animation: float_python 3.7s ease-in-out infinite;
+
+    /* Question mark pulsing */
+    @keyframes q_pulse_python {
+      0%, 15% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px #38BDF8);
+      }
+      20%, 30% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 16px #38BDF8) drop-shadow(0 0 25px #C084FC);
+      }
+      33% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+      90% {
+        opacity: 0;
+      }
+      95%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Shard 1 (Top-Left) */
+    @keyframes shard_tl_python {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, -65px) rotate(-45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 2 (Top-Right) */
+    @keyframes shard_tr_python {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, -65px) rotate(45deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 3 (Bottom-Left) */
+    @keyframes shard_bl_python {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-65px, 65px) rotate(-35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Shard 4 (Bottom-Right) */
+    @keyframes shard_br_python {
+      0%, 31% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+      }
+      38% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(65px, 65px) rotate(35deg) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    /* Blast wave circle */
+    @keyframes blast_wave_python {
+      0%, 31% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      32% {
+        opacity: 1;
+        transform: scale(0.2);
+      }
+      38% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    /* Revealed Icon Burst & Floating */
+    @keyframes icon_reveal_python {
+      0%, 31% {
+        transform: scale(0) rotate(-15deg);
+        opacity: 0;
+      }
+      34% {
+        /* Explosive Overshoot */
+        transform: scale(1.22) rotate(3deg);
+        opacity: 1;
+      }
+      38% {
+        transform: scale(0.96) rotate(-1deg);
+        opacity: 1;
+      }
+      42% {
+        transform: scale(1.0) translateY(0px) rotate(0deg);
+        opacity: 1;
+      }
+      60% {
+        /* Gentle float up */
+        transform: translateY(-8px) scale(1.02);
+        opacity: 1;
+      }
+      78% {
+        /* Gentle float down */
+        transform: translateY(0px) scale(1.0);
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+        transform: scale(1.0);
+      }
+      89% {
+        /* Shrinks back to box */
+        opacity: 0;
+        transform: scale(0.4) rotate(10deg);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+
+    .box-group {
+      animation: box_anim_python 6.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       animation-delay: 0.4s;
       transform-origin: 128px 128px;
-      filter: url(#glow-python);
     }
-  </style>
-  <g class="animated-badge">
-    <g xmlns="http://www.w3.org/2000/svg" transform="translate(0, 0)">
-          <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60" /><path fill="url(#paint0_linear_2_47)" d="M127.279 29C76.5066 29 79.6772 51.018 79.6772 51.018L79.7338 73.8284H128.185V80.6772H60.4893C60.4893 80.6772 28 76.9926 28 128.222C28 179.452 56.3573 177.636 56.3573 177.636H73.2812V153.863C73.2812 153.863 72.369 125.506 101.186 125.506H149.24C149.24 125.506 176.239 125.942 176.239 99.4123V55.5461C176.239 55.5461 180.338 29 127.279 29ZM100.563 44.339C105.384 44.339 109.28 48.2351 109.28 53.0556C109.28 57.8761 105.384 61.7723 100.563 61.7723C95.7426 61.7723 91.8465 57.8761 91.8465 53.0556C91.8465 48.2351 95.7426 44.339 100.563 44.339Z" /><path fill="url(#paint1_linear_2_47)" d="M128.721 227.958C179.493 227.958 176.323 205.941 176.323 205.941L176.266 183.13H127.815V176.281H195.511C195.511 176.281 228 179.966 228 128.736C228 77.5062 199.643 79.323 199.643 79.323H182.719V103.096C182.719 103.096 183.631 131.453 154.814 131.453H106.76C106.76 131.453 79.7607 131.016 79.7607 157.546V201.412C79.7607 201.412 75.6615 227.958 128.721 227.958ZM155.437 212.619C150.616 212.619 146.72 208.723 146.72 203.903C146.72 199.082 150.616 195.186 155.437 195.186C160.257 195.186 164.154 199.082 164.154 203.903C164.154 208.723 160.257 212.619 155.437 212.619Z" /><defs><linearGradient id="paint0_linear_2_47" x1="47.22" x2="146.333" y1="46.896" y2="145.02" gradientUnits="userSpaceOnUse"><stop stop-color="#387EB8" /><stop offset="1" stop-color="#366994" /></linearGradient><linearGradient id="paint1_linear_2_47" x1="108.056" x2="214.492" y1="109.905" y2="210.522" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE052" /><stop offset="1" stop-color="#FFC331" /></linearGradient></defs></svg>
-        </g>
-        
-  
+    .question-mark {
+      animation: q_pulse_python 6.5s ease-in-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 128px 128px;
+    }
+    .shard-tl {
+      animation: shard_tl_python 6.5s ease-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 64px 64px;
+    }
+    .shard-tr {
+      animation: shard_tr_python 6.5s ease-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 192px 64px;
+    }
+    .shard-bl {
+      animation: shard_bl_python 6.5s ease-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 64px 192px;
+    }
+    .shard-br {
+      animation: shard_br_python 6.5s ease-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 192px 192px;
+    }
+    .blast-circle {
+      animation: blast_wave_python 6.5s ease-out infinite;
+      animation-delay: 0.4s;
+      transform-origin: 128px 128px;
+    }
+    .icon-reveal-group {
+      animation: icon_reveal_python 6.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+      animation-delay: 0.4s;
+      transform-origin: 128px 128px;
+      filter: url(#icon-glow-python);
+    }
+  ]]></style>
+
+  <!-- BLAST SHOCKWAVE CIRCLE -->
+  <circle class="blast-circle" cx="128" cy="128" r="90" fill="url(#energy-burst-python)"/>
+
+  <!-- MYSTERY BOX GROUP -->
+  <g class="box-group" filter="url(#box-glow-python)">
+    <!-- Box Body -->
+    <rect x="12" y="12" width="232" height="232" rx="56" fill="url(#box-grad-python)" stroke="url(#border-grad-python)" stroke-width="6"/>
+
+    <!-- Cyber / Lucky Block Corner Rivets -->
+    <circle cx="48" cy="48" r="8" fill="#38BDF8" opacity="0.8"/>
+    <circle cx="208" cy="48" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="48" cy="208" r="8" fill="#818CF8" opacity="0.8"/>
+    <circle cx="208" cy="208" r="8" fill="#C084FC" opacity="0.8"/>
+
+    <!-- Stylized Question Mark "?" -->
+    <g class="question-mark">
+      <text x="128" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace" font-size="135" font-weight="900" fill="#38BDF8" text-anchor="middle">?</text>
+    </g>
+  </g>
+
+  <!-- SHATTERS / FLYING SHARDS -->
+  <g>
+    <!-- Shard TL -->
+    <path class="shard-tl" d="M12 12 H128 L110 128 L12 100 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <!-- Shard TR -->
+    <path class="shard-tr" d="M128 12 H244 L244 110 L140 128 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BL -->
+    <path class="shard-bl" d="M12 100 L110 128 L128 244 H12 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <!-- Shard BR -->
+    <path class="shard-br" d="M140 128 L244 110 L244 244 H128 Z" fill="#020617" stroke="#C084FC" stroke-width="4"/>
+  </g>
+
+  <!-- REVEALED ICON LAYER -->
+  <g class="icon-reveal-group">
+        <rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="#242938" rx="60" />
+        <path xmlns="http://www.w3.org/2000/svg" fill="url(#paint0_linear_2_47)" d="M127.279 29C76.5066 29 79.6772 51.018 79.6772 51.018L79.7338 73.8284H128.185V80.6772H60.4893C60.4893 80.6772 28 76.9926 28 128.222C28 179.452 56.3573 177.636 56.3573 177.636H73.2812V153.863C73.2812 153.863 72.369 125.506 101.186 125.506H149.24C149.24 125.506 176.239 125.942 176.239 99.4123V55.5461C176.239 55.5461 180.338 29 127.279 29ZM100.563 44.339C105.384 44.339 109.28 48.2351 109.28 53.0556C109.28 57.8761 105.384 61.7723 100.563 61.7723C95.7426 61.7723 91.8465 57.8761 91.8465 53.0556C91.8465 48.2351 95.7426 44.339 100.563 44.339Z" />
+        <path xmlns="http://www.w3.org/2000/svg" fill="url(#paint1_linear_2_47)" d="M128.721 227.958C179.493 227.958 176.323 205.941 176.323 205.941L176.266 183.13H127.815V176.281H195.511C195.511 176.281 228 179.966 228 128.736C228 77.5062 199.643 79.323 199.643 79.323H182.719V103.096C182.719 103.096 183.631 131.453 154.814 131.453H106.76C106.76 131.453 79.7607 131.016 79.7607 157.546V201.412C79.7607 201.412 75.6615 227.958 128.721 227.958ZM155.437 212.619C150.616 212.619 146.72 208.723 146.72 203.903C146.72 199.082 150.616 195.186 155.437 195.186C160.257 195.186 164.154 199.082 164.154 203.903C164.154 208.723 160.257 212.619 155.437 212.619Z" />
+        <defs xmlns="http://www.w3.org/2000/svg"><linearGradient id="paint0_linear_2_47" x1="47.22" x2="146.333" y1="46.896" y2="145.02" gradientUnits="userSpaceOnUse"><stop stop-color="#387EB8" /><stop offset="1" stop-color="#366994" /></linearGradient><linearGradient id="paint1_linear_2_47" x1="108.056" x2="214.492" y1="109.905" y2="210.522" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE052" /><stop offset="1" stop-color="#FFC331" /></linearGradient></defs>
   </g>
 </svg>
