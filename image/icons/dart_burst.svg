@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="-40 -40 336 336" fill="none" overflow="visible">
+  <defs>
+    <filter id="burst-glow-dart" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="rgba(0, 180, 171, 0.8)" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+    <radialGradient id="blast-grad-dart" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="rgba(0, 180, 171, 0.8)" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style><![CDATA[
+    /* Explosive Flying Shards (plays once on load) */
+    @keyframes shard_tl {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translate(-80px, -80px) rotate(-60deg) scale(0.3); opacity: 0; }
+    }
+    @keyframes shard_tr {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translate(80px, -80px) rotate(60deg) scale(0.3); opacity: 0; }
+    }
+    @keyframes shard_bl {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translate(-80px, 80px) rotate(-50deg) scale(0.3); opacity: 0; }
+    }
+    @keyframes shard_br {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translate(80px, 80px) rotate(50deg) scale(0.3); opacity: 0; }
+    }
+
+    /* Shockwave blast circle */
+    @keyframes blast_ring {
+      0% { transform: scale(0.1); opacity: 1; }
+      70% { transform: scale(1.9); opacity: 0.8; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    /* Icon Pop & Float */
+    @keyframes icon_pop {
+      0% { transform: scale(0) rotate(-25deg); opacity: 0; }
+      55% { transform: scale(1.25) rotate(4deg); opacity: 1; }
+      80% { transform: scale(0.96) rotate(-2deg); opacity: 1; }
+      100% { transform: scale(1.0) rotate(0deg); opacity: 1; }
+    }
+    @keyframes icon_idle_float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-4px) rotate(1.2deg); }
+      50% { transform: translateY(-9px) rotate(0deg); }
+      75% { transform: translateY(-4px) rotate(-1.2deg); }
+    }
+
+    .sh-tl { animation: shard_tl 0.55s ease-out forwards; transform-origin: 64px 64px; }
+    .sh-tr { animation: shard_tr 0.55s ease-out forwards; transform-origin: 192px 64px; }
+    .sh-bl { animation: shard_bl 0.55s ease-out forwards; transform-origin: 64px 192px; }
+    .sh-br { animation: shard_br 0.55s ease-out forwards; transform-origin: 192px 192px; }
+
+    .blast-circle {
+      animation: blast_ring 0.5s ease-out forwards;
+      transform-origin: 128px 128px;
+    }
+
+    .pop-container {
+      animation: icon_pop 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      transform-origin: 128px 128px;
+    }
+
+    .float-container {
+      animation: icon_idle_float 3.5s ease-in-out infinite;
+      animation-delay: 0.65s;
+      transform-origin: 128px 128px;
+      filter: url(#burst-glow-dart);
+    }
+  ]]></style>
+
+  <!-- SHOCKWAVE ENERGY BURST -->
+  <circle class="blast-circle" cx="128" cy="128" r="85" fill="url(#blast-grad-dart)"/>
+
+  <!-- SHATTERING BOX SHARDS (Flys out in 0.5s) -->
+  <g>
+    <path class="sh-tl" d="M12 12 H128 L108 128 L12 96 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <path class="sh-tr" d="M128 12 H244 L244 108 L138 128 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <path class="sh-bl" d="M12 96 L108 128 L128 244 H12 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <path class="sh-br" d="M138 128 L244 108 L244 244 H128 Z" fill="#020617" stroke="#C084FC" stroke-width="4"/>
+  </g>
+
+  <!-- REVEALED ICON (POPS THEN FLOATS FOREVER) -->
+  <g class="pop-container">
+    <g class="float-container">
+            <rect xmlns="http://www.w3.org/2000/svg" x="12" y="12" width="232" height="232" rx="56" fill="url(#box-grad-dart)" stroke="url(#border-grad-dart)" stroke-width="6" />
+
+    
+    
+            <path xmlns="http://www.w3.org/2000/svg" class="shard-tl" d="M12 12 H128 L110 128 L12 100 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="4" />
+    
+    
+            <path xmlns="http://www.w3.org/2000/svg" class="shard-tr" d="M128 12 H244 L244 110 L140 128 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4" />
+    
+    
+            <path xmlns="http://www.w3.org/2000/svg" class="shard-bl" d="M12 100 L110 128 L128 244 H12 Z" fill="#0F172A" stroke="#818CF8" stroke-width="4" />
+    
+    
+            <path xmlns="http://www.w3.org/2000/svg" class="shard-br" d="M140 128 L244 110 L244 244 H128 Z" fill="#020617" stroke="#C084FC" stroke-width="4" />
+  
+            <rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="#242938" rx="60" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#00C4B3" d="M87.4494 87.005L75.8113 75.3612L75.8563 159.463L75.9969 163.39C76.0532 165.246 76.4047 167.327 76.9672 169.493L169.147 202.005L192.209 191.796L192.229 191.762L87.4438 87.005H87.4494Z" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#22D3C5" d="M76.97 169.493H76.9785C76.97 169.459 76.956 169.42 76.9391 169.38C76.9588 169.423 76.9588 169.465 76.9672 169.493H76.97ZM192.187 191.796L169.124 202.005L76.9588 169.493C78.7166 176.254 82.6175 183.853 86.8081 187.999L116.874 217.916L183.778 218L192.159 191.796H192.187Z" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#0075C9" d="M76.1263 75.364L40.2866 129.491C37.311 132.669 38.796 139.227 43.5856 144.059L64.2744 164.917L77.2794 169.501C76.7169 167.341 76.3625 165.282 76.3091 163.398L76.1685 159.472L76.1263 75.3696V75.364Z" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#0075C9" d="M169.906 76.4469C167.741 75.8984 165.665 75.5525 163.795 75.499L159.638 75.3472L75.8113 75.3669L192.226 191.765L202.453 168.702L169.912 76.4525L169.906 76.4469Z" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#00A8E1" d="M169.799 76.4271C169.836 76.4412 169.875 76.4496 169.906 76.4553V76.444C169.87 76.4356 169.836 76.4356 169.799 76.4215V76.4271ZM188.404 86.3215C184.171 82.0606 176.676 78.1653 169.906 76.4553L202.447 168.697L192.209 191.759L217.19 183.777L217.246 115.287L188.401 86.3187L188.404 86.3215Z" />
+        
+            <path xmlns="http://www.w3.org/2000/svg" fill="#00C4B3" d="M165.344 63.5234L144.532 42.8234C139.677 38.0506 133.119 36.56 129.969 39.53L75.845 75.3613L159.672 75.3416L163.828 75.4934C165.699 75.5497 167.777 75.8928 169.94 76.4413L165.35 63.5178L165.344 63.5234Z" />
+  
+    </g>
+  </g>
+</svg>
