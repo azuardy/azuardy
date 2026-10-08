@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100" fill="none">
+  <defs>
+    <!-- Linear Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#38bdf8" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#c084fc;#38bdf8;#818cf8" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#38bdf8;#818cf8;#c084fc" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .code-tag {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      fill: #38bdf8;
+      opacity: 0.6;
+    }
+    .badge-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      fill: #f8fafc;
+      text-transform: uppercase;
+    }
+    .badge-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      fill: #94a3b8;
+    }
+    .pulse-dot {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="5" y="5" width="790" height="90" rx="16" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2" />
+
+  <!-- Shimmering Light Sweeping Across -->
+  <rect x="0" y="5" width="200" height="90" rx="16" fill="url(#shimmer)" opacity="0.4">
+    <animate attributeName="x" from="-200" to="800" dur="4s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Left Code Accents -->
+  <g transform="translate(35, 38)">
+    <text class="code-tag">&lt;dev&gt;</text>
+    <text class="code-tag" y="26" fill="#818cf8">{ flutter: true }</text>
+  </g>
+
+  <!-- Center Content -->
+  <g transform="translate(400, 42)" text-anchor="middle">
+    <!-- Status Indicator -->
+    <circle cx="-135" cy="-5" r="4.5" fill="#22c55e" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text class="badge-title">Interactive Tech Ecosystem</text>
+    <text class="badge-subtitle" y="24">Click any badge below to explore documentation</text>
+  </g>
+
+  <!-- Right Code Accents -->
+  <g transform="translate(685, 38)">
+    <text class="code-tag" fill="#c084fc">=&gt; build()</text>
+    <text class="code-tag" y="26">&lt;/dev&gt;</text>
+  </g>
+</svg>
